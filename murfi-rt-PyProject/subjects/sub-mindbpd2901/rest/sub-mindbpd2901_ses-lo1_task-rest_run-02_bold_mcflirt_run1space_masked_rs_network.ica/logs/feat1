@@ -1,0 +1,4 @@
+
+/bin/cp /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold_mcflirt_masked_rs_network.ica/design.fsf design.fsf
+
+mkdir .files;cp /home/rt-mgh/fsl/doc/fsl.css .files;cp -r /home/rt-mgh/fsl/doc/images .files/images

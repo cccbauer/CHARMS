@@ -1,0 +1,74 @@
+Fixing GitHub SSH Authentication (Permission Denied - publickey)
+
+Problem:
+--------
+You ran:
+    ssh -T git@github.com
+And got:
+    git@github.com: Permission denied (publickey)
+
+This means GitHub does not recognize your SSH key.
+
+Steps to Fix:
+=============
+
+1. Add Your Public Key to GitHub
+--------------------------------
+1. Copy your public key:
+       cat ~/.ssh/id_ed25519.pub
+
+2. Go to:
+       https://github.com/settings/keys
+
+3. Click:
+       "New SSH key"
+
+4. Paste the entire key that begins with:
+       ssh-ed25519 AAAA...
+
+5. Give it a title like "MIT Ubuntu" and click "Add SSH key"
+
+---
+
+2. Make Sure the Key is Loaded into the SSH Agent
+-------------------------------------------------
+Check if the key is loaded:
+       ssh-add -l
+
+If it says "The agent has no identities", run:
+       ssh-add ~/.ssh/id_ed25519
+
+---
+
+3. (Optional) Create an SSH Config File if You Have Multiple Keys
+------------------------------------------------------------------
+Run:
+       nano ~/.ssh/config
+
+Paste this:
+       Host github.com
+           HostName github.com
+           User git
+           IdentityFile ~/.ssh/id_ed25519
+           IdentitiesOnly yes
+
+Save and exit (Ctrl+O, Enter, Ctrl+X)
+
+---
+
+4. Test SSH Connection Again
+----------------------------
+       ssh -T git@github.com
+
+Expected:
+       Hi yourusername! You've successfully authenticated...
+
+---
+
+5. Push Your Code
+-----------------
+       git push origin main
+Or just:
+       git push
+
+You're now using SSH securely to interact with GitHub.

@@ -1,0 +1,28 @@
+
+/bin/cp /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/scripts/../subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold.fsf design.fsf
+
+mkdir .files;cp /home/rt-mgh/fsl/doc/fsl.css .files;cp -r /home/rt-mgh/fsl/doc/images .files/images
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 10 -l logs -N feat1a_init   /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold_mcflirt_masked_rs_network.ica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold_mcflirt_masked_rs_network.ica -I 1 -init
+64663
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 25 -l logs -N feat2_pre -j 64663  /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold_mcflirt_masked_rs_network.ica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold_mcflirt_masked_rs_network.ica -I 1 -prestats
+65845
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 65845  /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold_mcflirt_masked_rs_network.ica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-01_bold_mcflirt_masked_rs_network.ica -stop
+66943
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 10 -l logs -N feat1a_init   /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-02_bold_mcflirt_run1space_masked_rs_network.ica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-02_bold_mcflirt_run1space_masked_rs_network.ica -I 2 -init
+67121
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 25 -l logs -N feat2_pre -j 67121  /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-02_bold_mcflirt_run1space_masked_rs_network.ica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-02_bold_mcflirt_run1space_masked_rs_network.ica -I 2 -prestats
+67262
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 67262  /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-02_bold_mcflirt_run1space_masked_rs_network.ica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-02_bold_mcflirt_run1space_masked_rs_network.ica -stop
+68344
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 180 -l logs -N feat4_gica -j 65845,67262  /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/rs_network.gica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/rs_network.gica -gica
+68477
+
+/home/rt-mgh/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 68477  /home/rt-mgh/fsl/bin/feat /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/sub-mindbpd2901_ses-lo1_task-rest_run-02_bold_mcflirt_run1space_masked_rs_network.ica/design.fsf -D /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-mindbpd2901/rest/rs_network.gica -stop
+69691
