@@ -1,0 +1,11 @@
+# Ignore Singularity image files
+*.sif
+
+# Optional: Also ignore temporary Singularity build files
+.singularity/
+*.simg
+
+
+# Ignore files/directories starting with 'sub-'
+
+ /home/rt-mgh/MIND-BPD/murfi-rt-PyProject/subjects/sub-*

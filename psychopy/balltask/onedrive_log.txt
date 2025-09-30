@@ -1,0 +1,1396 @@
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/__pycache__/bids_tsv_convert_balltask.cpython-310.pyc ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+skipped.
+Uploading new items of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+INFO: A new onedrive client version is available. Please upgrade your client version when possible.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/__pycache__/murfi_activation_communicator.cpython-310.pyc ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask_autorand/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask_autorand/data/sub-mindbpd2004/sub-mindbpd2004_DMN_feedback_1.csv ... 
+
+
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/__pycache__/bids_tsv_convert_balltask.cpython-310.pyc ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+skipped.
+Uploading new items of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-transferpre_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-transferpre_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-transferpre_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Deleting item from OneDrive: MIND-BPD/psychopy/balltask/reopen_balltask_mgh-rt-mgh.sh
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/reopen_balltask_mgh.sh ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_2.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_4_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_2_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_2.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_3.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_4.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_2.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_3_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_2.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_5.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-feedback_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_4.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_5.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_3.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_2_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_2_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_2_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_4_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-transferpost_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_5_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-feedback_run-03.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_3_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_5_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_4.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-feedback_run-04.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_4_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-feedback_run-02.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_5_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_2.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_2_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_3.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_5.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_nofeedback_2.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_3_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_ses-nf_task-feedback_run-05.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/VNC_COMMANDS ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+skipped.
+Uploading new items of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask/onedrive_log-rt-mgh.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_nofeedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_nofeedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_ses-nf_task-transferpre_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_2.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_4_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_2_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_2.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_3.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_1_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_4.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Continuing the upload session ...
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_2.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_3_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_2.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_5.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_ses-nf_task-feedback_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_4.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_5.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_3.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_2_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_2_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_2_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_4_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_ses-nf_task-transferpost_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_5_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_ses-nf_task-feedback_run-03.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_3_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_5_frames.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_4.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_ses-nf_task-feedback_run-04.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_4_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_ses-nf_task-feedback_run-02.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_5_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_2.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_2_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_ses-nf_task-transferpre_run-01.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_3.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_5.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_2.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_3_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_feedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_ses-nf_task-feedback_run-05.tsv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/feedback/sub-mindbpd2099/sub-mindbpd2098_DMN_nofeedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2098/sub-mindbpd2098_DMN_feedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/rt-network_feedback_mgh.py ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new items of MIND-BPD/psychopy
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1_slider_questions.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
+
+WARNING: Your onedrive client version is now obsolete and unsupported. Please upgrade your client version.
+Current Application Version: 2.4.25
+Version Available:           2.5.6
+
+Configuring Global Azure AD Endpoints
+Initializing the Synchronization Engine ...
+Syncing changes from selected OneDrive path ...
+Uploading differences of MIND-BPD/psychopy
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1.log ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:02 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1_roi_outputs.csv ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/data/sub-mindbpd2099/sub-mindbpd2099_DMN_feedback_1.psydat ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00 
+done.
+Uploading modified file MIND-BPD/psychopy/balltask/onedrive_log.txt ... 
+                                                                                Uploading   0% |                                        |   ETA   --:--:--:                                                                                Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:00                                                                                 Uploading 100% |oooooooooooooooooooooooooooooooooooooooo| DONE IN 00:00:01 
+done.
+Uploading new items of MIND-BPD/psychopy
+Sync with OneDrive is complete
