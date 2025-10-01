@@ -27,16 +27,20 @@ import subprocess
 import shlex
 import locale
 from bids_tsv_convert_balltask import *
-import fnmatch # for matching csv file names for given run for sham subjects
+import fnmatch  # for matching csv file names for given run for sham subjects
+import numpy as np
+import shutil
 
 # button box
+# left_button = '3'
+# right_button = '4'
+# enter_button = '1'
+# FONT_SCALE = 1.4
+
+# button box mgh
 left_button='1'
 right_button='2'
 enter_button='0'
-
-
-# participant id prefix
-filename_prefix = "sub-mindbpd"
 
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -58,7 +62,7 @@ if num_cmd_line_arguments >= 3:
 else:
     input_run = ''
 
-# cmd line arg 4 will be feedback / no feedback 
+# cmd line arg 4 will be feedback / no feedback
 if num_cmd_line_arguments >= 4:
     if sys.argv[3] == 'Feedback':
         input_feedback = ['Feedback', 'No Feedback']
@@ -76,117 +80,160 @@ if num_cmd_line_arguments >= 4:
 else:
     input_feedback_condition = ['', '15min', '30min']
 
-# cmd line arg 7 will be C1 (real) vs J1 (sham)
-if num_cmd_line_arguments >= 5:
-    if sys.argv[5] == 'C1':
-        input_protocol = ['C1', 'J1']
-    else:
-        input_protocol = ['J1', 'C1']
-else:
-    input_protocol = ['', 'C1', 'J1']
-
-# cmd line arg 6+ will be anchor
+# cmd line arg 5+ will be anchor
 # if there is no command line argument -- use empty string
 # otherwise, use that as rum number
-if num_cmd_line_arguments >= 7:
-    input_anchor = ' '.join(sys.argv[6:])
+if num_cmd_line_arguments >= 6:
+    input_anchor = ' '.join(sys.argv[5:])
 else:
     input_anchor = ''
 
 #####################################################################################
 
-# Store info about the experiment 
+# Store info about the experiment
 expName = 'DMN_BallTask'  # from the Builder filename that created thi s script
-expInfo = {'participant':input_participant, 'run':input_run, 'anchor': input_anchor, 'feedback_on': input_feedback, 
-        'protocol': input_protocol}
+expInfo = {'participant': input_participant, 'run': input_run, 'anchor': input_anchor, 'feedback_on': input_feedback}
 
-
-murfi_FAKE=True
-
-# SHAM = True # added for Sham Feedback - set False for experimental group participant
+murfi_FAKE = False
 
 # Show dialogue box until all participant info has been entered
 while expInfo['feedback_on'] not in ['Feedback', 'No Feedback']:
-    expInfo['feedback_on'] =  input_feedback
-    dlg = gui.DlgFromDict(dictionary=expInfo, title=expName, 
-        labels = {'participant': 'Participant ID (2XXX)',
-                  'run': 'Run',
-                  'feedback_on': 'Display Feedback?',
-                  'anchor': 'Participant Anchor',
-                  'protocol': 'Version'}, # for real/sham
-        order = ['participant', 'run', 'feedback_on', 'anchor', 'protocol'])
-    if dlg.OK == False: 
+    expInfo['feedback_on'] = input_feedback
+    dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,
+                          labels={'participant': 'Participant ID (XXX)',
+                                  'run': 'Run',
+                                  'feedback_on': 'Display Feedback?',
+                                  'anchor': 'Participant Anchor'},
+                          order=['participant', 'run', 'feedback_on', 'anchor'])
+    if dlg.OK == False:
         core.quit()  # user pressed cancel
 
 # BPD: Ensure 3 digit formatting for participant number
 # expInfo['participant'] = f"{int(expInfo['participant']):03d}"
 
-# Hard code other experiment info 
+# Hard code other experiment info
 ## Timestamp
-expInfo['date'] = data.getDateStr()  
+expInfo['date'] = data.getDateStr()
 expInfo['expName'] = expName
 expInfo['No_of_ROIs'] = 2
 expInfo['Level_1_2_3'] = 1
 expInfo['Run_Time'] = 150
-expInfo['pda_outlier_threshold']=2
-circles_move_with_hits=False
-circle_radius_shrink_with_hits=True
-num_pda_outliers=0
+expInfo['pda_outlier_threshold'] = 2
+circles_move_with_hits = False
+circle_radius_shrink_with_hits = True
+num_pda_outliers = 0
 # Baseline time before feedback (seconds)
-BaseLineTime=30 
+BaseLineTime = 30
 
 # TR (seconds)
-expInfo['tr']=1.2
+expInfo['tr'] = 1.2
 
 # BPD changes
 expInfo['feedback_condition'] = '15min'
 
-# Now use the new Label field to set SHAM:
-if expInfo['protocol'] == "C1":
-    SHAM = False
-    #expInfo['protocol'] = "C1(Experimental)"
-    print("---- RUNNING PROTOCOL C1   ----")
-elif expInfo['protocol'] == "J1":
-    SHAM = True
-    #expInfo['protocol'] = "J1(Sham)"
-    print(":::: RUNNING PROTOCOL J1   ::::")
+'''RANDOMIZATION BY MMV modified by CCCB'''
+# Load in the randomization file
+# Try multiple possible locations for the randomization file
+import os
+import pandas as pd
 
-#
-roi_number= str('%s') %(expInfo['No_of_ROIs'])
-roi_number=int(roi_number)
+# List of possible file locations to check
+possible_paths = [
+    os.path.join('feedback', 'mgh_randlist.txt'),  # Original location
+    'mgh_randlist.txt',  # Current directory
+    os.path.join('..', 'feedback', 'mgh_randlist.txt'),  # Parent directory
+    os.path.join(_thisDir, 'feedback', 'mgh_randlist.txt'),  # Relative to script
+    os.path.join(_thisDir, 'mgh_randlist.txt')  # In script directory
+]
 
+# Try to find and load the randomization file
+rand_list = None
+for path in possible_paths:
+    if os.path.exists(path):
+        try:
+            # Try reading with different separators
+            # First try tab-separated
+            try:
+                rand_list = pd.read_csv(path, sep='\t')
+                print(f"Successfully loaded randomization file from: {path} (tab-separated)")
+            except:
+                # If tabs don't work, try automatic whitespace detection
+                rand_list = pd.read_csv(path, sep='\s+', engine='python')
+                print(f"Successfully loaded randomization file from: {path} (space-separated)")
+            
+            # Check if required columns exist
+            required_cols = ['participant_id', 'group', 'feedback']
+            if all(col in rand_list.columns for col in required_cols):
+                break
+            else:
+                print(f"File at {path} missing required columns: {required_cols}")
+                rand_list = None
+        except Exception as e:
+            print(f"Failed to read {path}: {e}")
+            rand_list = None
+
+if rand_list is None:
+    raise FileNotFoundError(
+        f"Could not find or read mgh_randlist.txt in any of these locations:\n" + 
+        "\n".join(possible_paths) +
+        "\n\nPlease ensure the file exists and has columns: participant_id, group, feedback"
+    )
+
+# Get the current subject number 
+sub_num = int(expInfo['participant'])  # Converts "001" to 1
+
+# Find the matching row - FIXED to use 'participant_id' column name
+sub_row = rand_list.loc[rand_list['participant_id'] == sub_num]
+
+if not sub_row.empty:
+    if sub_row.iloc[0]['group'] == 'R':
+        SHAM = False
+    else:
+        SHAM = True
+    sham_code = sub_row.iloc[0]['feedback']  # Gets R001, S001, etc.
+    
+    # Debug output
+    print(f"Participant {sub_num}: Group={sub_row.iloc[0]['group']}, SHAM={SHAM}, Code={sham_code}")
+else:
+    raise ValueError(f"Participant {sub_num} not found in randomization list!")
+
+
+roi_number = str('%s') % (expInfo['No_of_ROIs'])
+roi_number = int(roi_number)
 '''
 Minimum and maximum number of "hits" to targets for which scale factor won't be adjusted
 Fewer hits than min_hits --> scale factor goes up and ball moves faster
 More hits than max_hits (in either direction) --> scale factor goes down and ball moves more slowly
 '''
-min_hits=3
-max_hits=5
+min_hits = 3
+max_hits = 5
 
 # default scale factor (higher means ball moves up/down faster)
 default_scale_factor = 10
 
 # another interal scale factor to make sure scaling of feedback is appropriate (higher means ball moves up/down more SLOWLY)
-internal_scaler=10
+internal_scaler = 10
+
+# BPD change
+filename_prefix = "sub-charms"
+foldername = os.path.join('data', filename_prefix + expInfo['participant'])
 
 # Setup files for saving
 if not os.path.isdir('data'):
     os.makedirs('data')  # if this fails (e.g. permissions) we will get error
 
-if not os.path.exists(f"data/{filename_prefix}{expInfo['participant']}"):
-    os.mkdir(f"data/{filename_prefix}{expInfo['participant']}")
+if not os.path.exists(foldername):
+    os.mkdir(foldername)
 
-
+print("expInfo['feedback_on'] =", expInfo['feedback_on'])
 
 # output file string (different depending on if feedback is being offered)
 if expInfo['feedback_on'] == 'Feedback':
-    folder = os.path.join("data", f"{filename_prefix}{expInfo['participant']}")
-    filename = os.path.join(folder, f"{filename_prefix}{expInfo['participant']}_DMN_feedback_{expInfo['run']}")
-
+    filename = foldername + os.path.sep + '%s%s_DMN_feedback_%s' % (
+    filename_prefix, expInfo['participant'], expInfo['run'])
 elif expInfo['feedback_on'] == 'No Feedback':
-    folder = os.path.join("data", f"{filename_prefix}{expInfo['participant']}")
-    filename = os.path.join(folder, f"{filename_prefix}{expInfo['participant']}_DMN_nofeedback_{expInfo['run']}")
-    
+    filename = foldername + os.path.sep + '%s%s_DMN_nofeedback_%s' % (
+    filename_prefix, expInfo['participant'], expInfo['run'])
 
 # if filepath already exists, stop run and check with user
 # Allow choice of moving to next run or overwriting the current one
@@ -199,30 +246,37 @@ while os.path.exists(filename + '_roi_outputs.csv'):
         f'Or, click Cancel to exit'
     )
     warning_box.addField(
-        'Choose Run #',  # This is the label (first positional argument)
+        'Choose Run #',
         choices=[f"Run {int(expInfo['run']) + 1}", f"Overwrite Run {int(expInfo['run'])}"]
     )
     warning_box_data = warning_box.show()
-    
+
     if not warning_box.OK:
         core.quit()
-    
-    # If not canceling, update filename or overwrite
+
+    # If not canceling, set filename
     else:
         run_choice = warning_box_data[0].strip()
-        
+        # If not overwriting, set filename to next run
         if run_choice != f"Overwrite Run {expInfo['run']}":
             expInfo['run'] = int(expInfo['run']) + 1
-            filename = os.path.join(folder, f"{filename_prefix}{expInfo['participant']}_DMN_nofeedback_{expInfo['run']}")
-        
+            filename = foldername + os.path.sep + '%s%s_DMN_feedback_%s' % (
+            filename_prefix, expInfo['participant'], expInfo['run'])
+        # If overwriting, remove all existing files for this run
         elif run_choice == f"Overwrite Run {expInfo['run']}":
             print('OVERWRITE')
             print(filename)
-            os.remove(f'{filename}_slider_questions.csv')
-            os.remove(f'{filename}_roi_outputs.csv')
-            os.remove(f'{filename}.csv')
-            os.remove(f'{filename}.psydat')
-            break
+            # Remove all files matching the base filename pattern
+            import glob
+            pattern = f'{filename}*'
+            files_to_remove = glob.glob(pattern)
+            for file in files_to_remove:
+                try:
+                    os.remove(file)
+                    print(f'Removed: {file}')
+                except Exception as e:
+                    print(f'Could not remove {file}: {e}')
+            break  # Exit the while loop after overwriting
 
 # If first run, use default scale factor
 # Otherwise, adjust scale factor up/down if needed
@@ -234,19 +288,20 @@ else:
 
         # loop through prior runs, starting at most recent, until the most recent prior run with at least 140 volumes is found
         # label this most recent run with 140+ volumes as the "last run" to pull parameters from
-        last_run_complete=False
-        last_run_counter=1
-        while last_run_complete==False and last_run_counter < int(expInfo['run']):
-            last_run_filename = filename.replace("Feedback_" + str(expInfo['run']), 
-                                                 "Feedback_" + str(int(expInfo['run'])-last_run_counter)) + '_roi_outputs.csv'
+        last_run_complete = False
+        last_run_counter = 1
+        while last_run_complete == False and last_run_counter < int(expInfo['run']):
+            last_run_filename = filename.replace("feedback_" + str(expInfo['run']),
+                                                 "feedback_" + str(
+                                                     int(expInfo['run']) - last_run_counter)) + '_roi_outputs.csv'
             print(last_run_filename)
             print(expInfo['run'])
             print(expInfo['participant'])
             last_run_info = pd.read_csv(last_run_filename)
             if last_run_info.shape[0] > 140:
-                last_run_complete=True
+                last_run_complete = True
             else:
-                last_run_counter+=1
+                last_run_counter += 1
 
         # ONLY update scale factor if there is a prior COMPLETE run to use to do this
         if last_run_complete:
@@ -263,26 +318,77 @@ else:
             # if 5+ hits in either direction, decrease scale factor
             if last_run_dmn_hits > max_hits or last_run_cen_hits > max_hits:
                 expInfo['scale_factor'] = last_run_scale_factor * 0.75
-            
+
             # if not enough hits, increase scale factor
             elif last_run_cen_hits + last_run_dmn_hits < min_hits:
                 expInfo['scale_factor'] = last_run_scale_factor * 1.25
 
             # otherwise, keep scale factor the same
             else:
-                expInfo['scale_factor'] = last_run_scale_factor 
+                expInfo['scale_factor'] = last_run_scale_factor
 
             print('Last run scale factor: ', last_run_scale_factor, ' This run scale factor: ', expInfo['scale_factor'])
         else:
             print('WARNING: no prior complete runs. Settting to default scale factor.')
             expInfo['scale_factor'] = default_scale_factor
 
-    # If this breaks (no prior runs) use default scale factor    
+    # If this breaks (no prior runs) use default scale factor
     except Exception as error:
         print(error)
         print('ERROR: could not pull scale factor from previous run. Settting to default scale factor.')
         expInfo['scale_factor'] = default_scale_factor
 
+''' PREPARE THE SHAM PARTICIPANT BY COPYING THE MATCHED PARTICIPANT'''
+if SHAM:
+    # For SHAM participants, we need to find their matching real participant
+    # Extract the number from the current SHAM participant's feedback code
+    sham_code = sub_row.iloc[0]['feedback']  # e.g., S001
+    sham_number = int(sham_code[1:])  # Extract 001 as integer
+    
+    # Find the real participant with matching number in their feedback code
+    # Look for R + same number
+    real_code = f'R{sham_number:03d}'  # Creates R001 from S001
+    
+    # Find the row with this feedback code
+    real_match_row = rand_list.loc[rand_list['feedback'] == real_code]
+    
+    if real_match_row.empty:
+        raise ValueError(f"No matching real participant found with feedback code {real_code} for sham {sham_code}")
+    
+    # Get the actual participant ID of the matching real participant
+    sub_match_num = real_match_row.iloc[0]['participant_id']
+    sub_match = f"{sub_match_num:03d}"
+
+    # Check both possible locations for the matching data
+    match_feedback_csv_path_data = os.path.join("data", filename_prefix + sub_match)
+    match_feedback_csv_path_feedback = os.path.join("feedback", filename_prefix + sub_match)
+
+    # Actual subject directory
+    feedback_csv_path = os.path.join("feedback", filename_prefix + expInfo['participant'])
+
+    # Try to copy from either location
+    if os.path.exists(match_feedback_csv_path_feedback):
+        # Prefer the feedback directory if it exists
+        if not os.path.exists(feedback_csv_path):
+            shutil.copytree(match_feedback_csv_path_feedback, feedback_csv_path)
+            print(f"Copied sham data from feedback directory: {match_feedback_csv_path_feedback}")
+    elif os.path.exists(match_feedback_csv_path_data):
+        # Fall back to data directory
+        if not os.path.exists(feedback_csv_path):
+            # Create feedback directory and copy only needed files
+            os.makedirs(feedback_csv_path, exist_ok=True)
+            # Copy all feedback frame files
+            for file in os.listdir(match_feedback_csv_path_data):
+                if 'feedback' in file and 'frames.csv' in file:
+                    shutil.copy2(os.path.join(match_feedback_csv_path_data, file),
+                               os.path.join(feedback_csv_path, file))
+            print(f"Copied sham data from data directory: {match_feedback_csv_path_data}")
+    else:
+        raise FileNotFoundError(
+            f"Cannot find data for matched real participant {sub_match}.\n"
+            f"Checked:\n- {match_feedback_csv_path_data}\n- {match_feedback_csv_path_feedback}\n"
+            f"Please ensure participant {sub_match} has been run first."
+        )
 '''
 For Sham subjects read the frame data from the csv file for the matching run in the 'feedback' folder
 There should exist a folder by the same subject number within the 'feedback' folder and it should 
@@ -292,15 +398,16 @@ Each run should have a corresponding csv file
 
 if SHAM and expInfo['feedback_on'] == 'Feedback':
     # Construct the folder path dynamically
-    feedback_csv_path = os.path.join("feedback", expInfo['participant'])
+    feedback_csv_path = os.path.join("feedback", filename_prefix + expInfo['participant'])
 
     # Ensure the folder exists
     if not os.path.exists(feedback_csv_path):
         raise FileNotFoundError(f"Folder '{feedback_csv_path}' does not exist.")
 
     # Use fnmatch to match filenames like "*Feedback_<run>*.csv"
-    pattern = f"*Feedback_{expInfo['run']}*.csv"
+    pattern = f"*feedback_{expInfo['run']}_frames.csv"
     matching_files = [f for f in os.listdir(feedback_csv_path) if fnmatch.fnmatch(f, pattern)]
+    #print(matching_files)
 
     # Ensure exactly one match exists
     if len(matching_files) == 0:
@@ -313,9 +420,9 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     df_csv = pd.read_csv(csv_file)
     print(f"csv file: {csv_file}")
 
-RUN_TIME= str('%s') %(expInfo['Run_Time'])
-RUN_TIME=int(RUN_TIME)
-RUN_TIME=RUN_TIME
+RUN_TIME = str('%s') % (expInfo['Run_Time'])
+RUN_TIME = int(RUN_TIME)
+RUN_TIME = RUN_TIME
 
 # Convert scale factor and position to pixel space
 position_distance=expInfo['Level_1_2_3']
@@ -329,6 +436,8 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 with open(filename+'_roi_outputs.csv', 'a') as csvfile:
     stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
     stim_writer.writerow(['volume', 'scale_factor', 'time', 'time_plus_1.2', 'cen', 'dmn', 'stage', 'cen_cumulative_hits', 'dmn_cumulative_hits', 'pda_outlier', 'ball_y_position', 'top_circle_y_position', 'bottom_circle_y_position'])       
+
+
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -386,7 +495,8 @@ def run_slider(question_text='Default Text', left_label='left', right_label='rig
                 granularity=1,
                 color='white',
                 fillColor='white',
-                font=u'Arial')
+                font=u'Arial',
+                labelHeight=0.06)
 
     event.clearEvents('keyboard')
     vas.markerPos = 5
@@ -459,7 +569,7 @@ text_4 = visual.TextStim(win=win, ori=0, name='text_4',
     depth=-3.0)
 
 #prepare the targets
-colors=['yellow','blue','red','green','cyan','magenta','black','honeydew','indigo','maroon']
+colors=['yellow','lightblue','red','green','cyan','magenta','black','honeydew','indigo','maroon']
 roi_names_list=['cen','dmn']
 print (roi_names_list)
 n_roi = roi_number
@@ -487,7 +597,7 @@ home=[]
 for i in range(n_roi):
     roi_circle_i = visual.Circle(win, pos=(roi_pos[i, 1],roi_pos[i, 0]), 
                                  radius=0.15,fillColor=None, 
-                                 lineColor=colors[i], lineWidth=2)
+                                 lineColor=colors[i], lineWidth=3)
     roi_circle_i.size *= scale
     target_circles.append(roi_circle_i)
     hit_counter.append(0)
@@ -596,18 +706,22 @@ Try to continue using this as your anchor, but it is also okay to switch anytime
 ready_text="You will see the plus sign (+) for 30 seconds at the start. \
 Whenever you see the plus +,  please don’t practice Describing – just relax.\
 \n\nOnce the circles appear, please start the Describing practice. \
-This practice will last 2.5 min." 
+This practice will last 2.5 min."
 
-feedback_run1_text1 = "Great job! Now, you’ll get to continue your Mindful Describing  with some feedback based on your actual brain activity to help your practice! \
+ready_text2="When you see the plus sign (+), just relax.\
+\n\nOnce the circles appear, please start the Describing practice. \
+This scan will last 2.5 min."
+
+feedback_run1_text1 = "Great job! Now, you’ll get to try moving the ball with your mindful describing practice! \
 \n\nYou will see the 2 circles and white ball again. \
-When the white ball moves up towards the top yellow circle, this means you are in a mindful brain state with your Describing practice. \
+When the white ball moves up towards the top yellow circle, this means you are in a mindful brain state with your describing practice. \
 \nIf the ball reaches either of the circles, it will move back to the center."
 
-feedback_run1_text2 = "Try to focus mostly on the Mindful Describing Practice by being aware of your sensations from moment to moment and silently making a note in your mind. \
-\n\nYou can check the screen every once in a while to see where the ball is going." 
+#feedback_run1_text2 = "Try to focus mostly on the Mindful Describing Practice by being aware of your sensations from moment to moment and silently making a note in your mind. \
+#\n\nYou can check the screen every once in a while to see where the ball is going."
 
-feedback_later_runs_text = "Great job! Next, you’ll get to practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
-\n\nWhen the ball moves upwards, that corresponds to the Describing Practice."
+feedback_later_runs_text = "Great job! Now, you’re going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
+\n\nWhen the ball moves upwards, that corresponds to the describing practice."
 
 no_feedback_later_runs_text = "Great job! Next, you’ll get to practice Describing for another 2.5min. \
 \nThis time the ball and circles will not move, so you don’t need to check them."
@@ -617,12 +731,13 @@ if expInfo['feedback_on'] == "No Feedback":
     if int(expInfo['run']) == 1: 
         instruction_slide_list = [no_feedback_run1_text, ready_text]
     else:
-        instruction_slide_list = [no_feedback_later_runs_text, ready_text]
+        instruction_slide_list = [no_feedback_later_runs_text, ready_text2]
 elif expInfo['feedback_on'] == 'Feedback':
     if int(expInfo['run']) == 1: 
-        instruction_slide_list = [feedback_run1_text1, feedback_run1_text2, ready_text]
+        # instruction_slide_list = [feedback_run1_text1, feedback_run1_text2, ready_text]
+        instruction_slide_list = [feedback_run1_text1, ready_text2]
     else:
-        instruction_slide_list = [feedback_later_runs_text, ready_text]
+        instruction_slide_list = [feedback_later_runs_text, ready_text2]
 
 
 for instructions_slide in instruction_slide_list:
@@ -634,8 +749,8 @@ for instructions_slide in instruction_slide_list:
 # if not (SHAM and expInfo['feedback_on'] == 'Feedback'):
 from murfi_activation_communicator import MurfiActivationCommunicator
 roi_names = ['cen', 'dmn']#, 'mpfc','wm']
-# REPLACE THIS IP WITH THE MURFI COMPUTER'S IP 192.168.2.5
-communicator = MurfiActivationCommunicator('192.168.2.6',
+# REPLACE THIS IP WITH THE MURFI COMPUTER'S IP 192.168.2.5, EXTERNAL STIMULUS COMPUTER IS 196.168.2.6, FOR RUNNING ALL ON THE SYSTEM76 COMPUTER USE INTERNAL IP 127.0.0.1
+communicator = MurfiActivationCommunicator('127.0.0.1',
                                                15001, 210,
                                                roi_names,expInfo['tr'],murfi_FAKE)
 print ("murfi communicator ok")
@@ -736,8 +851,7 @@ t = 0
 baselineClock.reset()  # clock 
 frameN = -1
 frame = 0
-routineTimer = core.CountdownTimer(BaseLineTime)  # Create a new countdown timer with BaseLineTime seconds
-#routineTimer.addTime(BaseLineTime)
+routineTimer.addTime(BaseLineTime)
 # update component parameters for each repeat
 # keep track of which components have finished
 baselineComponents = []
@@ -829,9 +943,7 @@ subject_key_target = event.BuilderKeyResponse()  # create an object of type KeyR
 subject_key_target.status = NOT_STARTED
 subject_key_reset = event.BuilderKeyResponse()  # create an object of type KeyResponse
 subject_key_reset.status = NOT_STARTED
-routineTimer = core.CountdownTimer(RUN_TIME)  # Create a new countdown timer with RUN_TIME seconds
-
-#routineTimer.addTime(RUN_TIME)
+routineTimer.addTime(RUN_TIME)
 
 
 # Initialize parameters before feedback
@@ -1047,7 +1159,6 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
 if SHAM and expInfo['feedback_on'] == 'Feedback':
     # Load the sham feedback CSV (make sure the path and filename match your saving code)
     df_sham = pd.read_csv(csv_file)
-    print(f"Feedback file: {csv_file}")
 
     # Reset the clock if desired (or use the existing globalClock)
     # Compute offset: first frame's time value
@@ -1060,6 +1171,8 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     playbackClock = core.Clock()
     playbackClock.reset()
     # Loop over each saved frame (each row of the CSV)
+    last_murfi_time = 0
+
     for idx, row in df_sham.iterrows():
 
         # Check if Esc was pressed; if so, end the entire script.
@@ -1068,10 +1181,11 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
 
         # During Sham NF run, we still want to record MURFI outputs
         # update murfi communicator to receive and save CEN and DMN values to csv
-        if routineTimer.getTime() > 0:
-            # if not (SHAM and expInfo['feedback_on'] == 'Feedback'):
+        playTime = playbackClock.getTime()
+        if (playTime - last_murfi_time > 0.2) and (routineTimer.getTime() > 0):
             communicator.update()
             roi_raw_activations = []
+            last_murfi_time = playTime
 
             # Where ROI activation first comes in
             # CEN, DMN
@@ -1095,7 +1209,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
                     print(([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]]))
                     stim_writer.writerow(
                         [frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2,
-                         roi_raw_activations[0], roi_raw_activations[1], 'baseline', 0, 0, np.nan, np.nan, np.nan,
+                         roi_raw_activations[0], roi_raw_activations[1], 'feedback', 0, 0, np.nan, np.nan, np.nan,
                          np.nan])
                 frame += 1
 
@@ -1181,9 +1295,13 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
         # Adjust the target time so the first frame is at 0
         target_time = row["time"] - time_offset
         current_time = playbackClock.getTime()
-        wait_time = target_time - current_time
-        if wait_time > 0:
-            core.wait(wait_time)
+        wait_time = target_time - playbackClock.getTime()
+        if wait_time > 0.005:
+            core.wait(wait_time - 0.005)
+
+        while playbackClock.getTime() < target_time:
+            pass
+
 
 # End SHAM feedback loop
 
@@ -1194,13 +1312,40 @@ if expInfo['feedback_on'] == 'Feedback':
     df.to_csv(csv_filename, index=False)  # Save CSV without index
     print(f"Feedback frames saved to {csv_filename}")
 
+    # ADDITIONAL CODE FOR SHAM: Save to feedback directory if this is a Real participant
+    if not SHAM:  # Only save to feedback directory for real participants
+        # Create feedback directory structure
+        feedback_dir = os.path.join('feedback', filename_prefix + expInfo['participant'])
+        if not os.path.exists(feedback_dir):
+            os.makedirs(feedback_dir)
+            print(f"Created feedback directory: {feedback_dir}")
+        
+        # Copy the frames file to feedback directory for future sham use
+        feedback_csv_filename = os.path.join(feedback_dir, 
+                                           os.path.basename(csv_filename))
+        shutil.copy2(csv_filename, feedback_csv_filename)
+        print(f"Copied feedback frames for sham use to: {feedback_csv_filename}")
+        
+        # Also copy the ROI outputs file
+        roi_outputs_filename = filename + '_roi_outputs.csv'
+        feedback_roi_filename = os.path.join(feedback_dir, 
+                                           os.path.basename(roi_outputs_filename))
+        shutil.copy2(roi_outputs_filename, feedback_roi_filename)
+        print(f"Copied ROI outputs for sham reference to: {feedback_roi_filename}")
+        
+        # Copy slider questions if they exist
+        slider_filename = filename + '_slider_questions.csv'
+        if os.path.exists(slider_filename):
+            feedback_slider_filename = os.path.join(feedback_dir, 
+                                                  os.path.basename(slider_filename))
+            shutil.copy2(slider_filename, feedback_slider_filename)
+            print(f"Copied slider questions for reference to: {feedback_slider_filename}")
+
 #------Prepare to start Routine "baseline"-------
 t = 0
 baselineClock.reset()  # clock 
 frameN = -1
-#routineTimer.addTime(1.00000)
-routineTimer = core.CountdownTimer(1.00000)  # Create a new countdown timer 
-
+routineTimer.addTime(1.00000)
 # update component parameters for each repeat
 # keep track of which components have finished
 baselineComponents = []
@@ -1352,20 +1497,22 @@ else:
 next_participant=expInfo['participant']
 anchor = expInfo['anchor']
 next_feedback_condition = expInfo['feedback_condition']
-protocol = expInfo['protocol']
 
 # Shut down psychopy before starting next run
 quit_psychopy()
 
 
-# Start next run using subprocess (should run detached)!
-if expInfo['feedback_condition']=='15min':
+if expInfo['feedback_condition'] == '15min':
     if next_run < 6:
-        subprocess.Popen(["reopen_balltask_mgh.bat", str(next_participant), str(next_run), 
-            str(next_feedback), str(next_feedback_condition), str(protocol), str(anchor)])
-elif expInfo['feedback_condition']=='30min':
-        subprocess.Popen(["reopen_balltask_mgh.bat", str(next_participant), str(next_run), 
-            str(next_feedback), str(next_feedback_condition), str(protocol), str(anchor)])
+        subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_run),
+            str(next_feedback), str(next_feedback_condition), str(anchor)])
+    else:
+        print('Syncing OneDrive. Please wait')
+        subprocess.Popen(["onedrive", "--synchronize", "--single-directory", "'CHARMS/psychopy'", ">>",  "onedrive_log.tx"])
+elif expInfo['feedback_condition'] == '30min':
+    subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_run),
+        str(next_feedback), str(next_feedback_condition), str(anchor)])
 
 # Quit python
 sys.exit('Done with run')
+

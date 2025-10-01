@@ -133,7 +133,51 @@ expInfo['feedback_condition'] = '15min'
 
 '''RANDOMIZATION BY MMV modified by CCCB'''
 # Load in the randomization file
-rand_list = pd.read_csv('feedback' + os.path.sep + 'mgh_randlist.txt', sep='\t')
+# Try multiple possible locations for the randomization file
+import os
+import pandas as pd
+
+# List of possible file locations to check
+possible_paths = [
+    os.path.join('feedback', 'mgh_randlist.txt'),  # Original location
+    'mgh_randlist.txt',  # Current directory
+    os.path.join('..', 'feedback', 'mgh_randlist.txt'),  # Parent directory
+    os.path.join(_thisDir, 'feedback', 'mgh_randlist.txt'),  # Relative to script
+    os.path.join(_thisDir, 'mgh_randlist.txt')  # In script directory
+]
+
+# Try to find and load the randomization file
+rand_list = None
+for path in possible_paths:
+    if os.path.exists(path):
+        try:
+            # Try reading with different separators
+            # First try tab-separated
+            try:
+                rand_list = pd.read_csv(path, sep='\t')
+                print(f"Successfully loaded randomization file from: {path} (tab-separated)")
+            except:
+                # If tabs don't work, try automatic whitespace detection
+                rand_list = pd.read_csv(path, sep='\s+', engine='python')
+                print(f"Successfully loaded randomization file from: {path} (space-separated)")
+            
+            # Check if required columns exist
+            required_cols = ['participant_id', 'group', 'feedback']
+            if all(col in rand_list.columns for col in required_cols):
+                break
+            else:
+                print(f"File at {path} missing required columns: {required_cols}")
+                rand_list = None
+        except Exception as e:
+            print(f"Failed to read {path}: {e}")
+            rand_list = None
+
+if rand_list is None:
+    raise FileNotFoundError(
+        f"Could not find or read mgh_randlist.txt in any of these locations:\n" + 
+        "\n".join(possible_paths) +
+        "\n\nPlease ensure the file exists and has columns: participant_id, group, feedback"
+    )
 
 # Get the current subject number 
 sub_num = int(expInfo['participant'])  # Converts "001" to 1
@@ -147,8 +191,12 @@ if not sub_row.empty:
     else:
         SHAM = True
     sham_code = sub_row.iloc[0]['feedback']  # Gets R001, S001, etc.
+    
+    # Debug output
+    print(f"Participant {sub_num}: Group={sub_row.iloc[0]['group']}, SHAM={SHAM}, Code={sham_code}")
 else:
     raise ValueError(f"Participant {sub_num} not found in randomization list!")
+
 
 roi_number = str('%s') % (expInfo['No_of_ROIs'])
 roi_number = int(roi_number)
@@ -307,15 +355,36 @@ if SHAM:
     sub_match_num = sub_match_row.iloc[0]['participant_id']  # FIXED: use 'participant_id'
     sub_match = "{:03d}".format(sub_match_num)  # Format as 3 digits
 
-    # Get the matching feedback csv path
-    match_feedback_csv_path = os.path.join("data", filename_prefix + sub_match)
+    # Check both possible locations for the matching data
+    match_feedback_csv_path_data = os.path.join("data", filename_prefix + sub_match)
+    match_feedback_csv_path_feedback = os.path.join("feedback", filename_prefix + sub_match)
 
     # Actual subject directory
     feedback_csv_path = os.path.join("feedback", filename_prefix + expInfo['participant'])
 
-    # Copy over that folder
-    if not os.path.exists(feedback_csv_path):
-        shutil.copytree(match_feedback_csv_path, feedback_csv_path)
+    # Try to copy from either location
+    if os.path.exists(match_feedback_csv_path_feedback):
+        # Prefer the feedback directory if it exists
+        if not os.path.exists(feedback_csv_path):
+            shutil.copytree(match_feedback_csv_path_feedback, feedback_csv_path)
+            print(f"Copied sham data from feedback directory: {match_feedback_csv_path_feedback}")
+    elif os.path.exists(match_feedback_csv_path_data):
+        # Fall back to data directory
+        if not os.path.exists(feedback_csv_path):
+            # Create feedback directory and copy only needed files
+            os.makedirs(feedback_csv_path, exist_ok=True)
+            # Copy all feedback frame files
+            for file in os.listdir(match_feedback_csv_path_data):
+                if 'feedback' in file and 'frames.csv' in file:
+                    shutil.copy2(os.path.join(match_feedback_csv_path_data, file),
+                               os.path.join(feedback_csv_path, file))
+            print(f"Copied sham data from data directory: {match_feedback_csv_path_data}")
+    else:
+        raise FileNotFoundError(
+            f"Cannot find data for matched real participant {sub_match}.\n"
+            f"Checked:\n- {match_feedback_csv_path_data}\n- {match_feedback_csv_path_feedback}\n"
+            f"Please ensure participant {sub_match} has been run first."
+        )
 '''
 For Sham subjects read the frame data from the csv file for the matching run in the 'feedback' folder
 There should exist a folder by the same subject number within the 'feedback' folder and it should 
@@ -1238,6 +1307,35 @@ if expInfo['feedback_on'] == 'Feedback':
     csv_filename = filename+'_frames.csv'
     df.to_csv(csv_filename, index=False)  # Save CSV without index
     print(f"Feedback frames saved to {csv_filename}")
+
+    # ADDITIONAL CODE FOR SHAM: Save to feedback directory if this is a Real participant
+    if not SHAM:  # Only save to feedback directory for real participants
+        # Create feedback directory structure
+        feedback_dir = os.path.join('feedback', filename_prefix + expInfo['participant'])
+        if not os.path.exists(feedback_dir):
+            os.makedirs(feedback_dir)
+            print(f"Created feedback directory: {feedback_dir}")
+        
+        # Copy the frames file to feedback directory for future sham use
+        feedback_csv_filename = os.path.join(feedback_dir, 
+                                           os.path.basename(csv_filename))
+        shutil.copy2(csv_filename, feedback_csv_filename)
+        print(f"Copied feedback frames for sham use to: {feedback_csv_filename}")
+        
+        # Also copy the ROI outputs file
+        roi_outputs_filename = filename + '_roi_outputs.csv'
+        feedback_roi_filename = os.path.join(feedback_dir, 
+                                           os.path.basename(roi_outputs_filename))
+        shutil.copy2(roi_outputs_filename, feedback_roi_filename)
+        print(f"Copied ROI outputs for sham reference to: {feedback_roi_filename}")
+        
+        # Copy slider questions if they exist
+        slider_filename = filename + '_slider_questions.csv'
+        if os.path.exists(slider_filename):
+            feedback_slider_filename = os.path.join(feedback_dir, 
+                                                  os.path.basename(slider_filename))
+            shutil.copy2(slider_filename, feedback_slider_filename)
+            print(f"Copied slider questions for reference to: {feedback_slider_filename}")
 
 #------Prepare to start Routine "baseline"-------
 t = 0
