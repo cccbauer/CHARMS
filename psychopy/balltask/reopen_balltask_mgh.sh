@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Activate Anaconda environment
 #source ~/anaconda3/bin/activate psychopy_env
 source ~/psychopy_env/bin/activate

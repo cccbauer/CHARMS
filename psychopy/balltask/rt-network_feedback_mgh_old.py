@@ -94,7 +94,7 @@ else:
 expName = 'DMN_BallTask'  # from the Builder filename that created thi s script
 expInfo = {'participant': input_participant, 'run': input_run, 'anchor': input_anchor, 'feedback_on': input_feedback}
 
-murfi_FAKE = True
+murfi_FAKE = False
 
 # Show dialogue box until all participant info has been entered
 while expInfo['feedback_on'] not in ['Feedback', 'No Feedback']:
@@ -131,19 +131,19 @@ expInfo['tr'] = 1.2
 # BPD changes
 expInfo['feedback_condition'] = '15min'
 
-'''RANDOMIZATION - IMPROVED VERSION FOR SHAM ASSIGNMENT'''
+'''RANDOMIZATION BY MMV modified by CCCB'''
 # Load in the randomization file
+# Try multiple possible locations for the randomization file
 import os
 import pandas as pd
-import random
 
 # List of possible file locations to check
 possible_paths = [
-    os.path.join('feedback', 'mgh_randlist.txt'),
-    'mgh_randlist.txt',
-    os.path.join('..', 'feedback', 'mgh_randlist.txt'),
-    os.path.join(_thisDir, 'feedback', 'mgh_randlist.txt'),
-    os.path.join(_thisDir, 'mgh_randlist.txt')
+    os.path.join('feedback', 'mgh_randlist.txt'),  # Original location
+    'mgh_randlist.txt',  # Current directory
+    os.path.join('..', 'feedback', 'mgh_randlist.txt'),  # Parent directory
+    os.path.join(_thisDir, 'feedback', 'mgh_randlist.txt'),  # Relative to script
+    os.path.join(_thisDir, 'mgh_randlist.txt')  # In script directory
 ]
 
 # Try to find and load the randomization file
@@ -152,15 +152,17 @@ for path in possible_paths:
     if os.path.exists(path):
         try:
             # Try reading with different separators
+            # First try tab-separated
             try:
                 rand_list = pd.read_csv(path, sep='\t')
                 print(f"Successfully loaded randomization file from: {path} (tab-separated)")
             except:
-                rand_list = pd.read_csv(path, sep=r'\s+', engine='python')
+                # If tabs don't work, try automatic whitespace detection
+                rand_list = pd.read_csv(path, sep='\s+', engine='python')
                 print(f"Successfully loaded randomization file from: {path} (space-separated)")
             
             # Check if required columns exist
-            required_cols = ['participant_id', 'group']
+            required_cols = ['participant_id', 'group', 'feedback']
             if all(col in rand_list.columns for col in required_cols):
                 break
             else:
@@ -174,13 +176,13 @@ if rand_list is None:
     raise FileNotFoundError(
         f"Could not find or read mgh_randlist.txt in any of these locations:\n" + 
         "\n".join(possible_paths) +
-        "\n\nPlease ensure the file exists and has columns: participant_id, group"
+        "\n\nPlease ensure the file exists and has columns: participant_id, group, feedback"
     )
 
 # Get the current subject number 
-sub_num = int(expInfo['participant'])
+sub_num = int(expInfo['participant'])  # Converts "001" to 1
 
-# Find the matching row
+# Find the matching row - FIXED to use 'participant_id' column name
 sub_row = rand_list.loc[rand_list['participant_id'] == sub_num]
 
 if not sub_row.empty:
@@ -188,8 +190,10 @@ if not sub_row.empty:
         SHAM = False
     else:
         SHAM = True
+    sham_code = sub_row.iloc[0]['feedback']  # Gets R001, S001, etc.
     
-    print(f"Participant {sub_num}: Group={sub_row.iloc[0]['group']}, SHAM={SHAM}")
+    # Debug output
+    print(f"Participant {sub_num}: Group={sub_row.iloc[0]['group']}, SHAM={SHAM}, Code={sham_code}")
 else:
     raise ValueError(f"Participant {sub_num} not found in randomization list!")
 
@@ -334,75 +338,36 @@ else:
         print('ERROR: could not pull scale factor from previous run. Settting to default scale factor.')
         expInfo['scale_factor'] = default_scale_factor
 
-''' PREPARE THE SHAM PARTICIPANT BY COPYING THE MATCHED OR RANDOM REAL PARTICIPANT'''
+''' PREPARE THE SHAM PARTICIPANT BY COPYING THE MATCHED PARTICIPANT'''
 if SHAM:
-    # Function to check if a participant's dataset is complete
-    def is_dataset_complete(participant_id, min_runs=1):
-        """Check if a real participant has complete data"""
-        participant_str = f"{participant_id:03d}"
-        data_path = os.path.join("data", filename_prefix + participant_str)
-        feedback_path = os.path.join("feedback", filename_prefix + participant_str)
-        
-        # Check if either directory exists
-        if not os.path.exists(data_path) and not os.path.exists(feedback_path):
-            return False
-        
-        # Check for feedback frame files (indicator of completed runs)
-        complete_runs = 0
-        for path in [data_path, feedback_path]:
-            if os.path.exists(path):
-                for file in os.listdir(path):
-                    if 'feedback' in file and 'frames.csv' in file:
-                        # Check if the file has substantial data
-                        try:
-                            df = pd.read_csv(os.path.join(path, file))
-                            if len(df) > 100:  # Threshold for "complete"
-                                complete_runs += 1
-                        except:
-                            pass
-        
-        return complete_runs >= min_runs
+    # Find the matching subject
+    sham_code = sub_row.iloc[0]['feedback']  # Gets S001, S002, etc.
+    # Extract the numeric part and create the matching real code
+    sham_number = sham_code[1:]  # Gets 001, 002, etc.
+    real_code = 'R' + sham_number  # Creates R001, R002, etc.
     
-    # Create list of all REAL participants from the randomization list
-    real_participants = rand_list[rand_list['group'] == 'R']['participant_id'].tolist()
+    # ADDED: Find the matching real participant row
+    sub_match_row = rand_list.loc[rand_list['feedback'] == real_code]
     
-    # Sort to prioritize matching by participant number
-    real_participants_sorted = sorted(real_participants, 
-                                     key=lambda x: abs(x - sub_num))
+    if sub_match_row.empty:
+        raise ValueError(f"No matching real participant found for sham code {sham_code}")
     
-    # Find a suitable REAL participant with complete data
-    matched_participant = None
-    for real_id in real_participants_sorted:
-        if is_dataset_complete(real_id):
-            matched_participant = real_id
-            #uncoment for debugging 
-            #print(f"Using REAL participant {real_id:03d} data for SHAM participant {sub_num:03d}")
-            break
-    
-    if matched_participant is None:
-        # No complete REAL datasets found
-        raise ValueError(
-            f"No complete REAL participant datasets found for SHAM participant {sub_num:03d}.\n"
-            f"Please ensure at least one REAL participant has been run completely."
-        )
-    
-    # Format the matched participant ID
-    sub_match = f"{matched_participant:03d}"
-    
+    sub_match_num = sub_match_row.iloc[0]['participant_id']  # FIXED: use 'participant_id'
+    sub_match = "{:03d}".format(sub_match_num)  # Format as 3 digits
+
     # Check both possible locations for the matching data
     match_feedback_csv_path_data = os.path.join("data", filename_prefix + sub_match)
     match_feedback_csv_path_feedback = os.path.join("feedback", filename_prefix + sub_match)
-    
-    # Actual subject directory for this SHAM participant
+
+    # Actual subject directory
     feedback_csv_path = os.path.join("feedback", filename_prefix + expInfo['participant'])
-    
+
     # Try to copy from either location
     if os.path.exists(match_feedback_csv_path_feedback):
         # Prefer the feedback directory if it exists
         if not os.path.exists(feedback_csv_path):
             shutil.copytree(match_feedback_csv_path_feedback, feedback_csv_path)
-            #uncoment for debugging
-            #print(f"Copied SHAM data from feedback directory: {match_feedback_csv_path_feedback}")
+            print(f"Copied sham data from feedback directory: {match_feedback_csv_path_feedback}")
     elif os.path.exists(match_feedback_csv_path_data):
         # Fall back to data directory
         if not os.path.exists(feedback_csv_path):
@@ -413,13 +378,13 @@ if SHAM:
                 if 'feedback' in file and 'frames.csv' in file:
                     shutil.copy2(os.path.join(match_feedback_csv_path_data, file),
                                os.path.join(feedback_csv_path, file))
-            print(f"Copied SHAM data from data directory: {match_feedback_csv_path_data}")
+            print(f"Copied sham data from data directory: {match_feedback_csv_path_data}")
     else:
         raise FileNotFoundError(
-            f"Cannot find data for matched REAL participant {sub_match}.\n"
-            f"This should not happen as we already verified the data exists."
+            f"Cannot find data for matched real participant {sub_match}.\n"
+            f"Checked:\n- {match_feedback_csv_path_data}\n- {match_feedback_csv_path_feedback}\n"
+            f"Please ensure participant {sub_match} has been run first."
         )
-
 '''
 For Sham subjects read the frame data from the csv file for the matching run in the 'feedback' folder
 There should exist a folder by the same subject number within the 'feedback' folder and it should 
@@ -483,7 +448,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # Start Code - component code to be run before the window creation
 # Setup the Window
-win = visual.Window(size=(1080,1080), fullscr=False, screen=1, allowGUI=False, allowStencil=False,#1024, 1024
+win = visual.Window(size=(1080,1080), fullscr=True, screen=1, allowGUI=False, allowStencil=False,#1024, 1024
     monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
     blendMode='avg', useFBO=True,
     )
@@ -732,10 +697,10 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 no_feedback_run1_text = f"Next, you will get to continue the Mindful Describing practice you just learned.\
     \n\nBefore, you mentioned using your {expInfo['anchor']} as an anchor for your Describing Practice. \
 Try to continue using this as your anchor, but it is also okay to switch anytime.\
-\n\nYou will see 2 circles with a white ball in the middle, but they won't move for now."
+\n\nYou will see 2 circles with a white ball in the middle, but they won’t move for now."
 
 ready_text="You will see the plus sign (+) for 30 seconds at the start. \
-Whenever you see the plus +,  please don't practice Describing just relax.\
+Whenever you see the plus +,  please don’t practice Describing – just relax.\
 \n\nOnce the circles appear, please start the Describing practice. \
 This practice will last 2.5 min."
 
@@ -743,7 +708,7 @@ ready_text2="When you see the plus sign (+), just relax.\
 \n\nOnce the circles appear, please start the Describing practice. \
 This scan will last 2.5 min."
 
-feedback_run1_text1 = "Great job! Now, you'll get to try moving the ball with your mindful describing practice! \
+feedback_run1_text1 = "Great job! Now, you’ll get to try moving the ball with your mindful describing practice! \
 \n\nYou will see the 2 circles and white ball again. \
 When the white ball moves up towards the top yellow circle, this means you are in a mindful brain state with your describing practice. \
 \nIf the ball reaches either of the circles, it will move back to the center."
@@ -751,11 +716,11 @@ When the white ball moves up towards the top yellow circle, this means you are i
 #feedback_run1_text2 = "Try to focus mostly on the Mindful Describing Practice by being aware of your sensations from moment to moment and silently making a note in your mind. \
 #\n\nYou can check the screen every once in a while to see where the ball is going."
 
-feedback_later_runs_text = "Great job! Now, you're going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
+feedback_later_runs_text = "Great job! Now, you’re going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
 \n\nWhen the ball moves upwards, that corresponds to the describing practice."
 
-no_feedback_later_runs_text = "Great job! Next, you'll get to practice Describing for another 2.5min. \
-\nThis time the ball and circles will not move, so you don't need to check them."
+no_feedback_later_runs_text = "Great job! Next, you’ll get to practice Describing for another 2.5min. \
+\nThis time the ball and circles will not move, so you don’t need to check them."
 
 # Depending on whether feedback is offered/which run it is -- show different instruction slides
 if expInfo['feedback_on'] == "No Feedback":
@@ -1545,4 +1510,5 @@ elif expInfo['feedback_condition'] == '30min':
         str(next_feedback), str(next_feedback_condition), str(anchor)])
 
 # Quit python
-sys.exit('Done with run') 
+sys.exit('Done with run')
+
