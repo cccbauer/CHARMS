@@ -31,6 +31,10 @@ import fnmatch  # for matching csv file names for given run for sham subjects
 import numpy as np
 import shutil
 
+# mufi fake for debugging
+
+murfi_FAKE = True
+
 # button box
 # left_button = '3'
 # right_button = '4'
@@ -54,62 +58,76 @@ if num_cmd_line_arguments >= 2:
 else:
     input_participant = ''
 
-# cmd line arg 3 will be run number
-# if there is no command line argument 3 -- use empty string
-# otherwise, use that as rum number
+# cmd line arg 2 will be randomization number (NEW)
 if num_cmd_line_arguments >= 3:
-    input_run = sys.argv[2]
+    input_randomization = sys.argv[2]
+else:
+    input_randomization = ''
+
+# cmd line arg 3 will be run number (shifted from arg 2 to arg 3)
+if num_cmd_line_arguments >= 4:
+    input_run = sys.argv[3]
 else:
     input_run = ''
 
-# cmd line arg 4 will be feedback / no feedback
-if num_cmd_line_arguments >= 4:
-    if sys.argv[3] == 'Feedback':
+# cmd line arg 4 will be feedback / no feedback (shifted from arg 3 to arg 4)
+if num_cmd_line_arguments >= 5:
+    if sys.argv[4] == 'Feedback':
         input_feedback = ['Feedback', 'No Feedback']
     else:
         input_feedback = ['No Feedback', 'Feedback']
 else:
     input_feedback = ['', 'Feedback', 'No Feedback']
 
-# cmd line arg 5 will be 15min vs 30min
-if num_cmd_line_arguments >= 4:
-    if sys.argv[4] == '15min':
+# cmd line arg 5 will be 15min vs 30min (shifted from arg 4 to arg 5)
+if num_cmd_line_arguments >= 6:
+    if sys.argv[5] == '15min':
         input_feedback_condition = ['15min', '30min']
     else:
         input_feedback_condition = ['30min', '15min']
 else:
     input_feedback_condition = ['', '15min', '30min']
 
-# cmd line arg 5+ will be anchor
-# if there is no command line argument -- use empty string
-# otherwise, use that as rum number
-if num_cmd_line_arguments >= 6:
-    input_anchor = ' '.join(sys.argv[5:])
+# cmd line arg 6+ will be anchor (shifted from arg 5+ to arg 6+)
+if num_cmd_line_arguments >= 7:
+    input_anchor = ' '.join(sys.argv[6:])
 else:
     input_anchor = ''
+
+# Set default feedback_condition based on run number if not already specified
+if input_feedback_condition == ['', '15min', '30min']:
+    if input_run != '':
+        if int(input_run) <= 5:
+            input_feedback_condition = ['15min', '30min']  # Default to 15min for runs 1-5
+        else:
+            input_feedback_condition = ['30min', '15min']  # Default to 30min for runs 6+
+    # If run number is not provided, keep the original list order
+
 
 #####################################################################################
 
 # Store info about the experiment
-expName = 'DMN_BallTask'  # from the Builder filename that created thi s script
-expInfo = {'participant': input_participant, 'run': input_run, 'anchor': input_anchor, 'feedback_on': input_feedback}
-
-murfi_FAKE = True
+expName = 'DMN_BallTask'
+expInfo = {'participant': input_participant, 'randomization': input_randomization, 
+           'run': input_run, 'anchor': input_anchor, 'feedback_on': input_feedback,
+           'feedback_condition': input_feedback_condition}
 
 # Show dialogue box until all participant info has been entered
-while expInfo['feedback_on'] not in ['Feedback', 'No Feedback']:
+while (expInfo['feedback_on'] not in ['Feedback', 'No Feedback'] or 
+       expInfo['randomization'] == '' or
+       expInfo['feedback_condition'] not in ['15min', '30min']):
     expInfo['feedback_on'] = input_feedback
+    expInfo['feedback_condition'] = input_feedback_condition
     dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,
-                          labels={'participant': 'Participant ID (XXX)',
+                          labels={'participant': 'Participant ID (2XX)',
+                                  'randomization': 'Randomization Number (0XX)',
                                   'run': 'Run',
                                   'feedback_on': 'Display Feedback?',
+                                  'feedback_condition': 'Session Length',
                                   'anchor': 'Participant Anchor'},
-                          order=['participant', 'run', 'feedback_on', 'anchor'])
+                          order=['participant', 'randomization', 'run', 'feedback_on', 'feedback_condition', 'anchor'])
     if dlg.OK == False:
         core.quit()  # user pressed cancel
-
-# BPD: Ensure 3 digit formatting for participant number
-# expInfo['participant'] = f"{int(expInfo['participant']):03d}"
 
 # Hard code other experiment info
 ## Timestamp
@@ -127,9 +145,6 @@ BaseLineTime = 30
 
 # TR (seconds)
 expInfo['tr'] = 1.2
-
-# BPD changes
-expInfo['feedback_condition'] = '15min'
 
 '''RANDOMIZATION - IMPROVED VERSION FOR SHAM ASSIGNMENT'''
 # Load in the randomization file
@@ -177,11 +192,12 @@ if rand_list is None:
         "\n\nPlease ensure the file exists and has columns: participant_id, group"
     )
 
-# Get the current subject number 
-sub_num = int(expInfo['participant'])
 
-# Find the matching row
-sub_row = rand_list.loc[rand_list['participant_id'] == sub_num]
+# Get the randomization number for looking up SHAM/REAL status
+rand_num = int(expInfo['randomization'])
+
+# Find the matching row using randomization number
+sub_row = rand_list.loc[rand_list['participant_id'] == rand_num]
 
 if not sub_row.empty:
     if sub_row.iloc[0]['group'] == 'R':
@@ -189,7 +205,16 @@ if not sub_row.empty:
     else:
         SHAM = True
     
-    print(f"Participant {sub_num}: Group={sub_row.iloc[0]['group']}, SHAM={SHAM}")
+    print(f"Randomization {rand_num}: Group={sub_row.iloc[0]['group']}, SHAM={SHAM}")
+    print(f"Using Participant ID {expInfo['participant']} for file naming")
+else:
+    raise ValueError(f"Randomization number {rand_num} not found in randomization list!")
+if not sub_row.empty:
+    if sub_row.iloc[0]['group'] == 'R':
+        SHAM = False
+    else:
+        SHAM = True
+    
 else:
     raise ValueError(f"Participant {sub_num} not found in randomization list!")
 
@@ -339,6 +364,7 @@ if SHAM:
     # Function to check if a participant's dataset is complete
     def is_dataset_complete(participant_id, min_runs=1):
         """Check if a real participant has complete data"""
+        # Use participant_id directly since we're checking the REAL participants
         participant_str = f"{participant_id:03d}"
         data_path = os.path.join("data", filename_prefix + participant_str)
         feedback_path = os.path.join("feedback", filename_prefix + participant_str)
@@ -366,9 +392,9 @@ if SHAM:
     # Create list of all REAL participants from the randomization list
     real_participants = rand_list[rand_list['group'] == 'R']['participant_id'].tolist()
     
-    # Sort to prioritize matching by participant number
+# Sort to prioritize matching by randomization number
     real_participants_sorted = sorted(real_participants, 
-                                     key=lambda x: abs(x - sub_num))
+                                     key=lambda x: abs(x - rand_num))  # Changed from sub_num
     
     # Find a suitable REAL participant with complete data
     matched_participant = None
@@ -882,7 +908,7 @@ t = 0
 baselineClock.reset()  # clock 
 frameN = -1
 frame = 0
-routineTimer.addTime(BaseLineTime)
+routineTimer.reset(BaseLineTime)
 # update component parameters for each repeat
 # keep track of which components have finished
 baselineComponents = []
@@ -974,7 +1000,7 @@ subject_key_target = event.BuilderKeyResponse()  # create an object of type KeyR
 subject_key_target.status = NOT_STARTED
 subject_key_reset = event.BuilderKeyResponse()  # create an object of type KeyResponse
 subject_key_reset.status = NOT_STARTED
-routineTimer.addTime(RUN_TIME)
+routineTimer.reset(RUN_TIME)
 
 
 # Initialize parameters before feedback
@@ -1376,7 +1402,7 @@ if expInfo['feedback_on'] == 'Feedback':
 t = 0
 baselineClock.reset()  # clock 
 frameN = -1
-routineTimer.addTime(1.00000)
+routineTimer.reset(1.00000)
 # update component parameters for each repeat
 # keep track of which components have finished
 baselineComponents = []
@@ -1525,24 +1551,23 @@ else:
     next_run = int(expInfo['run']) + 1
     next_feedback='Feedback'
 
-next_participant=expInfo['participant']
+# Add randomization to the next run parameters
+next_participant = expInfo['participant']
+next_randomization = expInfo['randomization']
 anchor = expInfo['anchor']
 next_feedback_condition = expInfo['feedback_condition']
 
-# Shut down psychopy before starting next run
-quit_psychopy()
-
-
+# Update the subprocess calls
 if expInfo['feedback_condition'] == '15min':
     if next_run < 6:
-        subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_run),
-            str(next_feedback), str(next_feedback_condition), str(anchor)])
+        subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization), 
+            str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])
     else:
         print('Syncing OneDrive. Please wait')
         subprocess.Popen(["onedrive", "--synchronize", "--single-directory", "'CHARMS/psychopy'", ">>",  "onedrive_log.tx"])
 elif expInfo['feedback_condition'] == '30min':
-    subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_run),
-        str(next_feedback), str(next_feedback_condition), str(anchor)])
+    subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization),
+        str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])
 
 # Quit python
 sys.exit('Done with run') 
