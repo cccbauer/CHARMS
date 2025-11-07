@@ -1,11 +1,10 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-"""
-This experiment was created using PsychoPy2 Experiment Builder (v1.81.03), Wed 04 Feb 2015 11:22:15 AM EST
+
+"""This experiment was created using PsychoPy2 Experiment Builder (v1.81.03), Wed 04 Feb 2015 11:22:15 AM EST
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
-  Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
-"""
+  Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008"""
 
 from __future__ import division  # so that 1/3=0.333 instead of 1/3=0
 from psychopy import visual, core, data, event, logging, sound, gui
@@ -30,10 +29,6 @@ from bids_tsv_convert_balltask import *
 import fnmatch  # for matching csv file names for given run for sham subjects
 import numpy as np
 import shutil
-
-# mufi fake for debugging
-
-murfi_FAKE = True
 
 # button box
 # left_button = '3'
@@ -93,24 +88,36 @@ if num_cmd_line_arguments >= 7:
     input_anchor = ' '.join(sys.argv[6:])
 else:
     input_anchor = ''
-
-# Set default feedback_condition based on run number if not already specified
-if input_feedback_condition == ['', '15min', '30min']:
-    if input_run != '':
-        if int(input_run) <= 5:
-            input_feedback_condition = ['15min', '30min']  # Default to 15min for runs 1-5
-        else:
-            input_feedback_condition = ['30min', '15min']  # Default to 30min for runs 6+
-    # If run number is not provided, keep the original list order
-
-
 #####################################################################################
 
 # Store info about the experiment
-expName = 'DMN_BallTask'
+expName = 'DMN_BallTask'  # from the Builder filename that created thi s script
 expInfo = {'participant': input_participant, 'randomization': input_randomization, 
            'run': input_run, 'anchor': input_anchor, 'feedback_on': input_feedback,
            'feedback_condition': input_feedback_condition}
+# MURFI fake for debugging
+murfi_FAKE = True
+
+# Add popup warning if murfi_FAKE is True
+if murfi_FAKE:
+    fake_warning = gui.Dlg(title='MURFI FAKE MODE WARNING', labelButtonOK='Continue', labelButtonCancel='Cancel')
+    fake_warning.addText('WARNING: murfi_FAKE is currently set to True!')
+    fake_warning.addText('This means no real MURFI data will be used.')
+    fake_warning.addText('')  # blank line
+    fake_warning.addField('', choices=['Keep FAKE mode ON', 'Turn FAKE mode OFF'])
+    fake_warning_data = fake_warning.show()
+    
+    if not fake_warning.OK:
+        core.quit()  # user pressed cancel
+    else:
+        # Update murfi_FAKE based on user choice
+        if fake_warning_data[0] == 'Turn FAKE mode OFF':
+            murfi_FAKE = False
+            print('murfi_FAKE has been turned OFF')
+            screen_size=True
+        else:
+            print('Continuing with murfi_FAKE = True')
+            screen_size=False
 
 # Show dialogue box until all participant info has been entered
 while (expInfo['feedback_on'] not in ['Feedback', 'No Feedback'] or 
@@ -129,6 +136,7 @@ while (expInfo['feedback_on'] not in ['Feedback', 'No Feedback'] or
     if dlg.OK == False:
         core.quit()  # user pressed cancel
 
+
 # Hard code other experiment info
 ## Timestamp
 expInfo['date'] = data.getDateStr()
@@ -146,52 +154,65 @@ BaseLineTime = 30
 # TR (seconds)
 expInfo['tr'] = 1.2
 
+# CHARMS changes
+
+def update_participant_mapping(rand_num, participant_id):
+    """Update the randomization to participant ID mapping file"""
+    mapping_file = os.path.join('feedback', 'participant_mapping.txt')
+    
+    # Make sure feedback directory exists
+    if not os.path.exists('feedback'):
+        os.makedirs('feedback')
+    
+    # Read existing mappings
+    if os.path.exists(mapping_file):
+        mapping_df = pd.read_csv(mapping_file, sep='\t', dtype={'randomization_id': str, 'participant_id': str})
+    else:
+        mapping_df = pd.DataFrame(columns=['randomization_id', 'participant_id'])
+    
+    # Format both IDs as 3-digit strings
+    rand_num_str = f"{rand_num:03d}"
+    participant_id_str = f"{participant_id}" if isinstance(participant_id, str) else f"{participant_id:03d}"
+    
+    # Check if this randomization is already mapped
+    if rand_num_str in mapping_df['randomization_id'].values:
+        # Update existing entry
+        mapping_df.loc[mapping_df['randomization_id'] == rand_num_str, 'participant_id'] = participant_id_str
+    else:
+        # Add new entry
+        new_row = pd.DataFrame({'randomization_id': [rand_num_str], 'participant_id': [participant_id_str]})
+        mapping_df = pd.concat([mapping_df, new_row], ignore_index=True)
+    
+    # Sort by randomization_id and save
+    mapping_df = mapping_df.sort_values('randomization_id')
+    mapping_df.to_csv(mapping_file, sep='\t', index=False)
+    
+
 '''RANDOMIZATION - IMPROVED VERSION FOR SHAM ASSIGNMENT'''
-# Load in the randomization file
+
+# Load in the randomization file with proper error handling
 import os
 import pandas as pd
-import random
 
-# List of possible file locations to check
+# Try multiple possible file locations
 possible_paths = [
     os.path.join('feedback', 'mgh_randlist.txt'),
     'mgh_randlist.txt',
-    os.path.join('..', 'feedback', 'mgh_randlist.txt'),
-    os.path.join(_thisDir, 'feedback', 'mgh_randlist.txt'),
-    os.path.join(_thisDir, 'mgh_randlist.txt')
+    os.path.join('..', 'feedback', 'mgh_randlist.txt')
 ]
 
-# Try to find and load the randomization file
 rand_list = None
 for path in possible_paths:
     if os.path.exists(path):
         try:
-            # Try reading with different separators
-            try:
-                rand_list = pd.read_csv(path, sep='\t')
-                print(f"Successfully loaded randomization file from: {path} (tab-separated)")
-            except:
-                rand_list = pd.read_csv(path, sep=r'\s+', engine='python')
-                print(f"Successfully loaded randomization file from: {path} (space-separated)")
-            
-            # Check if required columns exist
-            required_cols = ['participant_id', 'group']
-            if all(col in rand_list.columns for col in required_cols):
-                break
-            else:
-                print(f"File at {path} missing required columns: {required_cols}")
-                rand_list = None
+            rand_list = pd.read_csv(path, sep='\t')
+            print(f"Successfully loaded randomization file from: {path}")
+            break
         except Exception as e:
             print(f"Failed to read {path}: {e}")
-            rand_list = None
 
 if rand_list is None:
-    raise FileNotFoundError(
-        f"Could not find or read mgh_randlist.txt in any of these locations:\n" + 
-        "\n".join(possible_paths) +
-        "\n\nPlease ensure the file exists and has columns: participant_id, group"
-    )
-
+    raise FileNotFoundError("Could not find mgh_randlist.txt")
 
 # Get the randomization number for looking up SHAM/REAL status
 rand_num = int(expInfo['randomization'])
@@ -205,22 +226,16 @@ if not sub_row.empty:
     else:
         SHAM = True
     
-    print(f"Randomization {rand_num}: Group={sub_row.iloc[0]['group']}, SHAM={SHAM}")
     print(f"Using Participant ID {expInfo['participant']} for file naming")
 else:
     raise ValueError(f"Randomization number {rand_num} not found in randomization list!")
-if not sub_row.empty:
-    if sub_row.iloc[0]['group'] == 'R':
-        SHAM = False
-    else:
-        SHAM = True
-    
-else:
-    raise ValueError(f"Participant {sub_num} not found in randomization list!")
 
-
+# Update the participant mapping file
+update_participant_mapping(rand_num, expInfo['participant'])
+#
 roi_number = str('%s') % (expInfo['No_of_ROIs'])
 roi_number = int(roi_number)
+
 '''
 Minimum and maximum number of "hits" to targets for which scale factor won't be adjusted
 Fewer hits than min_hits --> scale factor goes up and ball moves faster
@@ -235,7 +250,7 @@ default_scale_factor = 10
 # another interal scale factor to make sure scaling of feedback is appropriate (higher means ball moves up/down more SLOWLY)
 internal_scaler = 10
 
-# BPD change
+# CHARMS change
 filename_prefix = "sub-charms"
 foldername = os.path.join('data', filename_prefix + expInfo['participant'])
 
@@ -267,7 +282,7 @@ while os.path.exists(filename + '_roi_outputs.csv'):
         f'Or, click Cancel to exit'
     )
     warning_box.addField(
-        'Choose Run #',
+        'Choose Run #',  # This is the label (first positional argument)
         choices=[f"Run {int(expInfo['run']) + 1}", f"Overwrite Run {int(expInfo['run'])}"]
     )
     warning_box_data = warning_box.show()
@@ -279,15 +294,17 @@ while os.path.exists(filename + '_roi_outputs.csv'):
     else:
         run_choice = warning_box_data[0].strip()
         # If not overwriting, set filename to next run
+        # if f"Overwrite Run {int(expInfo['run'])}" not in warning_box_data:
         if run_choice != f"Overwrite Run {expInfo['run']}":
             expInfo['run'] = int(expInfo['run']) + 1
             filename = foldername + os.path.sep + '%s%s_DMN_feedback_%s' % (
             filename_prefix, expInfo['participant'], expInfo['run'])
-        # If overwriting, remove all existing files for this run
+        # If overwriting, keep current filename
+        # elif f"Overwrite Run {int(expInfo['run'])}" in warning_box_data:
         elif run_choice == f"Overwrite Run {expInfo['run']}":
             print('OVERWRITE')
             print(filename)
-            # Remove all files matching the base filename pattern
+            # Remove files only if they exist
             import glob
             pattern = f'{filename}*'
             files_to_remove = glob.glob(pattern)
@@ -297,7 +314,7 @@ while os.path.exists(filename + '_roi_outputs.csv'):
                     print(f'Removed: {file}')
                 except Exception as e:
                     print(f'Could not remove {file}: {e}')
-            break  # Exit the while loop after overwriting
+            break
 
 # If first run, use default scale factor
 # Otherwise, adjust scale factor up/down if needed
@@ -360,14 +377,34 @@ else:
         expInfo['scale_factor'] = default_scale_factor
 
 ''' PREPARE THE SHAM PARTICIPANT BY COPYING THE MATCHED OR RANDOM REAL PARTICIPANT'''
-if SHAM:
+if SHAM:num_cmd_line_arguments = len(sys.argv)
+mapping_file = os.path.join('feedback', 'participant_mapping.txt')
+if not os.path.exists(mapping_file):
+    raise FileNotFoundError(
+        f"Participant mapping file not found at {mapping_file}.\n"
+        f"This file is created automatically when REAL participants are run.\n"
+        f"Please run at least one REAL participant first."
+    )
+
+    mapping_df = pd.read_csv(mapping_file, sep='\t', dtype={'randomization_id': str, 'participant_id': str})
+
+    # Get list of REAL randomization IDs from the randomization list (as strings)
+    real_rand_ids = [f"{x:03d}" for x in rand_list[rand_list['group'] == 'R']['participant_id'].tolist()]
+
+    # Filter mapping to only include REAL participants
+    real_mappings = mapping_df[mapping_df['randomization_id'].isin(real_rand_ids)]
+
+    if real_mappings.empty:
+        raise ValueError(
+            f"No REAL participants found in mapping file.\n"
+            f"Please run at least one REAL participant first."
+        )
+    
     # Function to check if a participant's dataset is complete
     def is_dataset_complete(participant_id, min_runs=1):
         """Check if a real participant has complete data"""
-        # Use participant_id directly since we're checking the REAL participants
-        participant_str = f"{participant_id:03d}"
-        data_path = os.path.join("data", filename_prefix + participant_str)
-        feedback_path = os.path.join("feedback", filename_prefix + participant_str)
+        data_path = os.path.join("data", filename_prefix + participant_id)
+        feedback_path = os.path.join("feedback", filename_prefix + participant_id)
         
         # Check if either directory exists
         if not os.path.exists(data_path) and not os.path.exists(feedback_path):
@@ -379,41 +416,40 @@ if SHAM:
             if os.path.exists(path):
                 for file in os.listdir(path):
                     if 'feedback' in file and 'frames.csv' in file:
-                        # Check if the file has substantial data
                         try:
                             df = pd.read_csv(os.path.join(path, file))
-                            if len(df) > 100:  # Threshold for "complete"
+                            if len(df) > 100:
                                 complete_runs += 1
                         except:
                             pass
         
         return complete_runs >= min_runs
     
-    # Create list of all REAL participants from the randomization list
-    real_participants = rand_list[rand_list['group'] == 'R']['participant_id'].tolist()
-    
-# Sort to prioritize matching by randomization number
-    real_participants_sorted = sorted(real_participants, 
-                                     key=lambda x: abs(x - rand_num))  # Changed from sub_num
-    
+    # Sort real mappings to prioritize matching by randomization number
+    real_mappings = real_mappings.copy()
+    real_mappings['distance'] = real_mappings['randomization_id'].apply(lambda x: abs(int(x) - rand_num))
+    real_mappings = real_mappings.sort_values('distance')
+        
     # Find a suitable REAL participant with complete data
-    matched_participant = None
-    for real_id in real_participants_sorted:
-        if is_dataset_complete(real_id):
-            matched_participant = real_id
-            #uncoment for debugging 
-            #print(f"Using REAL participant {real_id:03d} data for SHAM participant {sub_num:03d}")
+    matched_participant_id = None
+    matched_rand_id = None
+    for _, row in real_mappings.iterrows():
+        participant_id = row['participant_id']
+        if is_dataset_complete(participant_id):
+            matched_participant_id = participant_id
+            matched_rand_id = row['randomization_id']
+            print(f"Using REAL participant {participant_id} (randomization {matched_rand_id}) "
+                 f"data for SHAM participant {expInfo['participant']} (randomization {rand_num:03d})")
             break
     
-    if matched_participant is None:
-        # No complete REAL datasets found
+    if matched_participant_id is None:
         raise ValueError(
-            f"No complete REAL participant datasets found for SHAM participant {sub_num:03d}.\n"
+            f"No complete REAL participant datasets found for SHAM participant {expInfo['participant']}.\n"
             f"Please ensure at least one REAL participant has been run completely."
         )
     
-    # Format the matched participant ID
-    sub_match = f"{matched_participant:03d}"
+    # Use the matched participant ID for copying data
+    sub_match = matched_participant_id
     
     # Check both possible locations for the matching data
     match_feedback_csv_path_data = os.path.join("data", filename_prefix + sub_match)
@@ -424,17 +460,12 @@ if SHAM:
     
     # Try to copy from either location
     if os.path.exists(match_feedback_csv_path_feedback):
-        # Prefer the feedback directory if it exists
         if not os.path.exists(feedback_csv_path):
             shutil.copytree(match_feedback_csv_path_feedback, feedback_csv_path)
-            #uncoment for debugging
-            #print(f"Copied SHAM data from feedback directory: {match_feedback_csv_path_feedback}")
+            print(f"Copied SHAM data from feedback directory: {match_feedback_csv_path_feedback}")
     elif os.path.exists(match_feedback_csv_path_data):
-        # Fall back to data directory
         if not os.path.exists(feedback_csv_path):
-            # Create feedback directory and copy only needed files
             os.makedirs(feedback_csv_path, exist_ok=True)
-            # Copy all feedback frame files
             for file in os.listdir(match_feedback_csv_path_data):
                 if 'feedback' in file and 'frames.csv' in file:
                     shutil.copy2(os.path.join(match_feedback_csv_path_data, file),
@@ -442,8 +473,7 @@ if SHAM:
             print(f"Copied SHAM data from data directory: {match_feedback_csv_path_data}")
     else:
         raise FileNotFoundError(
-            f"Cannot find data for matched REAL participant {sub_match}.\n"
-            f"This should not happen as we already verified the data exists."
+            f"Cannot find data for matched REAL participant {sub_match}."
         )
 
 '''
@@ -464,7 +494,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     # Use fnmatch to match filenames like "*Feedback_<run>*.csv"
     pattern = f"*feedback_{expInfo['run']}_frames.csv"
     matching_files = [f for f in os.listdir(feedback_csv_path) if fnmatch.fnmatch(f, pattern)]
-    #print(matching_files)
+    print(matching_files)
 
     # Ensure exactly one match exists
     if len(matching_files) == 0:
@@ -494,8 +524,6 @@ with open(filename+'_roi_outputs.csv', 'a') as csvfile:
     stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
     stim_writer.writerow(['volume', 'scale_factor', 'time', 'time_plus_1.2', 'cen', 'dmn', 'stage', 'cen_cumulative_hits', 'dmn_cumulative_hits', 'pda_outlier', 'ball_y_position', 'top_circle_y_position', 'bottom_circle_y_position'])       
 
-
-
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
@@ -509,7 +537,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # Start Code - component code to be run before the window creation
 # Setup the Window
-win = visual.Window(size=(1080,1080), fullscr=False, screen=1, allowGUI=False, allowStencil=False,#1024, 1024
+win = visual.Window(size=(1080,1080), fullscr=screen_size, screen=1, allowGUI=False, allowStencil=False,#1024, 1024
     monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
     blendMode='avg', useFBO=True,
     )
@@ -758,10 +786,10 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 no_feedback_run1_text = f"Next, you will get to continue the Mindful Describing practice you just learned.\
     \n\nBefore, you mentioned using your {expInfo['anchor']} as an anchor for your Describing Practice. \
 Try to continue using this as your anchor, but it is also okay to switch anytime.\
-\n\nYou will see 2 circles with a white ball in the middle, but they won't move for now."
+\n\nYou will see 2 circles with a white ball in the middle, but they won’t move for now."
 
 ready_text="You will see the plus sign (+) for 30 seconds at the start. \
-Whenever you see the plus +,  please don't practice Describing just relax.\
+Whenever you see the plus +,  please don’t practice Describing – just relax.\
 \n\nOnce the circles appear, please start the Describing practice. \
 This practice will last 2.5 min."
 
@@ -769,7 +797,7 @@ ready_text2="When you see the plus sign (+), just relax.\
 \n\nOnce the circles appear, please start the Describing practice. \
 This scan will last 2.5 min."
 
-feedback_run1_text1 = "Great job! Now, you'll get to try moving the ball with your mindful describing practice! \
+feedback_run1_text1 = "Great job! Now, you’ll get to try moving the ball with your mindful describing practice! \
 \n\nYou will see the 2 circles and white ball again. \
 When the white ball moves up towards the top yellow circle, this means you are in a mindful brain state with your describing practice. \
 \nIf the ball reaches either of the circles, it will move back to the center."
@@ -777,11 +805,11 @@ When the white ball moves up towards the top yellow circle, this means you are i
 #feedback_run1_text2 = "Try to focus mostly on the Mindful Describing Practice by being aware of your sensations from moment to moment and silently making a note in your mind. \
 #\n\nYou can check the screen every once in a while to see where the ball is going."
 
-feedback_later_runs_text = "Great job! Now, you're going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
+feedback_later_runs_text = "Great job! Now, you’re going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
 \n\nWhen the ball moves upwards, that corresponds to the describing practice."
 
-no_feedback_later_runs_text = "Great job! Next, you'll get to practice Describing for another 2.5min. \
-\nThis time the ball and circles will not move, so you don't need to check them."
+no_feedback_later_runs_text = "Great job! Next, you’ll get to practice Describing for another 2.5min. \
+\nThis time the ball and circles will not move, so you don’t need to check them."
 
 # Depending on whether feedback is offered/which run it is -- show different instruction slides
 if expInfo['feedback_on'] == "No Feedback":
@@ -908,7 +936,7 @@ t = 0
 baselineClock.reset()  # clock 
 frameN = -1
 frame = 0
-routineTimer.reset(BaseLineTime)
+routineTimer.addTime(BaseLineTime)
 # update component parameters for each repeat
 # keep track of which components have finished
 baselineComponents = []
@@ -995,12 +1023,14 @@ for thisComponent in baselineComponents:
 t = 0
 feedbackClock.reset()  # clock 
 frameN = -1
+frame_save_counter = 0  # NEW: Track frames for selective saving
+
 # update component parameters for each repeat
 subject_key_target = event.BuilderKeyResponse()  # create an object of type KeyResponse
 subject_key_target.status = NOT_STARTED
 subject_key_reset = event.BuilderKeyResponse()  # create an object of type KeyResponse
 subject_key_reset.status = NOT_STARTED
-routineTimer.reset(RUN_TIME)
+routineTimer.addTime(RUN_TIME)
 
 
 # Initialize parameters before feedback
@@ -1015,6 +1045,7 @@ win.flip()
 
 pda_outlier=False
 frame_data = []  # List to store all frame details
+frame_save_counter = 0  # NEW: Counter for frame saving optimization
 #-------Start Routine "feedback"-------
 # initialize last_acquired_frame_time
 last_acquired_frame_time = feedbackClock.getTime()
@@ -1156,55 +1187,60 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
         for i in range(n_roi):
             target_circles[i].draw()
         ball.draw()
-
+        
         # flip window
         win.flip()
-
-        frame_info = {}
-        # Store frame data including details for all circles and the ball
-        # Save ball attributes as before
-        frame_info["time"] = globalClock.getTime()
-        frame_info["ball_x"] = ball.pos[0]
-        frame_info["ball_y"] = ball.pos[1]
-        frame_info["ball_radius"] = ball.radius
-
-        # Here, if ball.fillColor is a string, save it as is:
-        if ball.fillColor is None:
-            ball_fill = [-1, -1, -1]  # black
-        else:
-            ball_fill = ball.fillColor
-        frame_info["ball_color_r"] = ball_fill[0]
-        frame_info["ball_color_g"] = ball_fill[1]
-        frame_info["ball_color_b"] = ball_fill[2]
-
-        # Save details for each of the three ROIs (target circles)
-        for i, roi in enumerate(target_circles):
-            frame_info[f"roi{i + 1}_x"] = roi.pos[0]
-            frame_info[f"roi{i + 1}_y"] = roi.pos[1]
-            frame_info[f"roi{i + 1}_radius"] = roi.radius
-            # Fill Color
-            if roi.fillColor is None:
-                # Force black for 'no fill' to ensure no mid-gray
-                fill_color = [-1, -1, -1]
+        
+        # OPTIMIZATION: Only save every 5th frame (~30fps instead of 144fps)
+        # This reduces file size by 80% with no perceptible visual difference
+        frame_save_counter += 1
+        if frame_save_counter % 5 == 0:
+            frame_info = {}
+            # Store frame data including details for all circles and the ball
+            # Save ball attributes as before
+            frame_info["time"] = globalClock.getTime()
+            frame_info["ball_x"] = ball.pos[0]
+            frame_info["ball_y"] = ball.pos[1]
+            frame_info["ball_radius"] = ball.radius
+            
+            # Here, if ball.fillColor is a string, save it as is:
+            if ball.fillColor is None:
+                ball_fill = [-1, -1, -1]  # black
             else:
-                fill_color = roi.fillColor
-
-            # If fill_color is [0,0,0] for some reason, also force it to black
-            if (fill_color[0] == 0 and fill_color[1] == 0 and fill_color[2] == 0):
-                fill_color = [-1, -1, -1]
-
-            frame_info[f"roi{i + 1}_color_r"] = fill_color[0]
-            frame_info[f"roi{i + 1}_color_g"] = fill_color[1]
-            frame_info[f"roi{i + 1}_color_b"] = fill_color[2]
-
-            # Line Color
-            line_color = roi.lineColor
-            frame_info[f"roi{i + 1}_lineColor_r"] = line_color[0]
-            frame_info[f"roi{i + 1}_lineColor_g"] = line_color[1]
-            frame_info[f"roi{i + 1}_lineColor_b"] = line_color[2]
-
-        frame_data.append(frame_info)
-
+                ball_fill = ball.fillColor
+            frame_info["ball_color_r"] = ball_fill[0]
+            frame_info["ball_color_g"] = ball_fill[1]
+            frame_info["ball_color_b"] = ball_fill[2]
+            
+            # Save details for each of the ROIs (target circles)
+            for i, roi in enumerate(target_circles):
+                frame_info[f"roi{i + 1}_x"] = roi.pos[0]
+                frame_info[f"roi{i + 1}_y"] = roi.pos[1]
+                frame_info[f"roi{i + 1}_radius"] = roi.radius
+                
+                # Fill Color
+                if roi.fillColor is None:
+                    # Force black for 'no fill' to ensure no mid-gray
+                    fill_color = [-1, -1, -1]
+                else:
+                    fill_color = roi.fillColor
+                    
+                # If fill_color is [0,0,0] for some reason, also force it to black
+                if (fill_color[0] == 0 and fill_color[1] == 0 and fill_color[2] == 0):
+                    fill_color = [-1, -1, -1]
+                    
+                frame_info[f"roi{i + 1}_color_r"] = fill_color[0]
+                frame_info[f"roi{i + 1}_color_g"] = fill_color[1]
+                frame_info[f"roi{i + 1}_color_b"] = fill_color[2]
+                
+                # Line Color
+                line_color = roi.lineColor
+                frame_info[f"roi{i + 1}_lineColor_r"] = line_color[0]
+                frame_info[f"roi{i + 1}_lineColor_g"] = line_color[1]
+                frame_info[f"roi{i + 1}_lineColor_b"] = line_color[2]
+            
+            frame_data.append(frame_info)
+    
     # quit if escape pressed
     if endExpNow or event.getKeys(keyList=["escape"]):
         core.quit()
@@ -1212,197 +1248,162 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
 
 #END OF FEEDBACK LOOP
 
-# SHAM feedback display
+# OPTIMIZED SHAM feedback display - Smooth interpolation with correct timing
 if SHAM and expInfo['feedback_on'] == 'Feedback':
-    # Load the sham feedback CSV (make sure the path and filename match your saving code)
+    # Load the sham feedback CSV
     df_sham = pd.read_csv(csv_file)
+    print(f"Loaded SHAM feedback file: {csv_file}")
+    print(f"Total frames in CSV: {len(df_sham)}")
 
-    # Reset the clock if desired (or use the existing globalClock)
     # Compute offset: first frame's time value
     time_offset = df_sham.iloc[0]["time"]
 
-    # just to pass the check for a good run to display slider questions
+
+    # DEBUG: Check timing
+    print(f"First frame time: {df_sham.iloc[0]['time']:.3f}s")
+    print(f"Last frame time: {df_sham.iloc[-1]['time']:.3f}s")
+    print(f"Time offset: {time_offset:.3f}s")
+    print(f"Adjusted duration: {df_sham.iloc[-1]['time'] - time_offset:.3f}s")
+    # Set run_stop_time to pass the check for slider questions
     run_stop_time = 100
 
     # Start a dedicated playback clock
     playbackClock = core.Clock()
     playbackClock.reset()
-    # Loop over each saved frame (each row of the CSV)
-    last_murfi_time = 0
-
-    for idx, row in df_sham.iterrows():
-
-        # Check if Esc was pressed; if so, end the entire script.
+    
+    
+    # OPTIMIZATION: Downsample to 60Hz for smooth playback
+    frame_diffs = df_sham['time'].diff()
+    avg_frame_interval = frame_diffs.mean()
+    current_fps = 1.0 / avg_frame_interval if avg_frame_interval > 0 else 144
+    
+    if current_fps > 90:
+        downsample_factor = int(current_fps / 60)
+        df_sham = df_sham.iloc[::downsample_factor].reset_index(drop=True)
+        print(f"Downsampled from {current_fps:.1f}Hz to ~60Hz")
+        print(f"Reduced from {len(df_sham)*downsample_factor} to {len(df_sham)} frames")
+    
+    # Pre-convert to numpy arrays for faster access
+    ball_data = {
+        'x': df_sham['ball_x'].values,
+        'y': df_sham['ball_y'].values,
+        'radius': df_sham['ball_radius'].values,
+        'color_r': df_sham['ball_color_r'].values,
+        'color_g': df_sham['ball_color_g'].values,
+        'color_b': df_sham['ball_color_b'].values
+    }
+    
+    roi_data = []
+    for i in range(n_roi):
+        roi_data.append({
+            'x': df_sham[f'roi{i+1}_x'].values,
+            'y': df_sham[f'roi{i+1}_y'].values,
+            'radius': df_sham[f'roi{i+1}_radius'].values,
+            'color_r': df_sham[f'roi{i+1}_color_r'].values,
+            'color_g': df_sham[f'roi{i+1}_color_g'].values,
+            'color_b': df_sham[f'roi{i+1}_color_b'].values,
+            'line_r': df_sham[f'roi{i+1}_lineColor_r'].values,
+            'line_g': df_sham[f'roi{i+1}_lineColor_g'].values,
+            'line_b': df_sham[f'roi{i+1}_lineColor_b'].values
+        })
+    
+    frame_times = df_sham['time'].values - time_offset
+    
+    # Filter to only include frames within 150 seconds
+    max_playback_time = 150.0
+    valid_indices = frame_times <= max_playback_time
+    num_valid_frames = np.sum(valid_indices)
+    
+    print(f"Filtered to {num_valid_frames} frames within {max_playback_time:.1f}s")
+    print(f"Starting SHAM playback")
+    
+#    Loop only over valid frames (within 150s window)
+    for idx in range(num_valid_frames):
+        
+        # Check if Esc was pressed
         if event.getKeys(keyList=["escape"]):
             core.quit()
 
-        # During Sham NF run, we still want to record MURFI outputs
-        # update murfi communicator to receive and save CEN and DMN values to csv
-        playTime = playbackClock.getTime()
-        if (playTime - last_murfi_time > 0.2) and (routineTimer.getTime() > 0):
-            communicator.update()
-            roi_raw_activations = []
-            last_murfi_time = playTime
+        # Check MURFI on every iteration to ensure we don't miss volumes
+        communicator.update()
+        roi_raw_activations = []
 
-            # Where ROI activation first comes in
-            # CEN, DMN
-            try:
-                for i in range(n_roi):
-                    roi_raw_i = communicator.get_roi_activation(roi_names_list[i], frame)
-                    roi_raw_activations.append(roi_raw_i)
-            except:
-                print(f"Did not get data for frame {frame}")
-                roi_raw_activations = [np.nan, np.nan]
+        try:
+            for i in range(n_roi):
+                roi_raw_i = communicator.get_roi_activation(roi_names_list[i], frame)
+                roi_raw_activations.append(roi_raw_i)
+        except:
+            roi_raw_activations = [np.nan, np.nan]
 
-            # check for any missing values (nan) in the roi_raw_activatinp.isnan(roi_raw_activations[0])ons pulled for the current frame
-            # If there is a nan value, this most likely indicates that data hasn't been acquired yet for the current volume.
-            # In this case, continue, and keep trying to acquire roi_raw_activations from MURFI (without advancing the frame)
-            if np.isnan(roi_raw_activations[0]) or np.isnan(roi_raw_activations[1]):
-                pass
-            else:
-                # If there is a new volume of output from MURFI, record it, and advance frame
-                with open(filename + '_roi_outputs.csv', 'a') as csvfile:
-                    stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-                    print(([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]]))
-                    stim_writer.writerow(
-                        [frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2,
-                         roi_raw_activations[0], roi_raw_activations[1], 'feedback', 0, 0, np.nan, np.nan, np.nan,
-                         np.nan])
-                frame += 1
+        # Check for valid data
+        if len(roi_raw_activations) >= 2 and not (np.isnan(roi_raw_activations[0]) or np.isnan(roi_raw_activations[1])):
+            with open(filename + '_roi_outputs.csv', 'a') as csvfile:
+                stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                if frame % 10 == 0:  # Print every 10th frame
+                    print([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]])
+                stim_writer.writerow(
+                    [frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2,
+                     roi_raw_activations[0], roi_raw_activations[1], 'feedback', 0, 0, np.nan, np.nan, np.nan,
+                     np.nan])
+            frame += 1
 
-        # Code to draw sham feedback from csv and also save drawn elements with timestamp
-        # Update the ball's properties using the CSV data
-        ball.pos = (row["ball_x"], row["ball_y"])
-        ball.radius = row["ball_radius"]
+        # Update ball using numpy arrays - SMOOTH 60Hz interpolation
+        ball.pos = (ball_data['x'][idx], ball_data['y'][idx])
+        ball.radius = ball_data['radius'][idx]
         ball.fillColor = [
-            row["ball_color_r"],
-            row["ball_color_g"],
-            row["ball_color_b"]
+            ball_data['color_r'][idx],
+            ball_data['color_g'][idx],
+            ball_data['color_b'][idx]
         ]
 
-        # Update each target circle's properties.
-        # (Assuming you have, for example, 2 or 3 circles in target_circles.)
+        # Update circles using numpy arrays
         for i, circle in enumerate(target_circles):
-            circle.pos = (row[f"roi{i+1}_x"], row[f"roi{i+1}_y"])
-            circle.radius = row[f"roi{i+1}_radius"]
+            circle.pos = (roi_data[i]['x'][idx], roi_data[i]['y'][idx])
+            circle.radius = roi_data[i]['radius'][idx]
             circle.fillColor = [
-                row[f"roi{i + 1}_color_r"],
-                row[f"roi{i + 1}_color_g"],
-                row[f"roi{i + 1}_color_b"]
+                roi_data[i]['color_r'][idx],
+                roi_data[i]['color_g'][idx],
+                roi_data[i]['color_b'][idx]
             ]
             circle.lineColor = [
-                row[f"roi{i + 1}_lineColor_r"],
-                row[f"roi{i + 1}_lineColor_g"],
-                row[f"roi{i + 1}_lineColor_b"]
+                roi_data[i]['line_r'][idx],
+                roi_data[i]['line_g'][idx],
+                roi_data[i]['line_b'][idx]
             ]
 
-        # Draw all visual elements
+        # Draw all elements
         for circle in target_circles:
             circle.draw()
         ball.draw()
-
-        # Flip the window to update the display
         win.flip()
 
-        frame_info = {}
-        # Store frame data including details for all circles and the ball
-        # Save ball attributes as before (assuming ball.fillColor is a numeric array or text)
-        frame_info["time"] = globalClock.getTime()
-        frame_info["ball_x"] = ball.pos[0]
-        frame_info["ball_y"] = ball.pos[1]
-        frame_info["ball_radius"] = ball.radius
-
-        # Here, if ball.fillColor is a string, save it as is:
-        if ball.fillColor is None:
-            ball_fill = [-1, -1, -1]  # black
-        else:
-            ball_fill = ball.fillColor
-        frame_info["ball_color_r"] = ball_fill[0]
-        frame_info["ball_color_g"] = ball_fill[1]
-        frame_info["ball_color_b"] = ball_fill[2]
-
-        # Save details for each of the three ROIs (target circles)
-        for i, roi in enumerate(target_circles):
-            frame_info[f"roi{i + 1}_x"] = roi.pos[0]
-            frame_info[f"roi{i + 1}_y"] = roi.pos[1]
-            frame_info[f"roi{i + 1}_radius"] = roi.radius
-            # Fill Color
-            if roi.fillColor is None:
-                # Force black for 'no fill' to ensure no mid-gray
-                fill_color = [-1, -1, -1]
-            else:
-                fill_color = roi.fillColor
-
-            # If fill_color is [0,0,0] for some reason, also force it to black
-            if (fill_color[0] == 0 and fill_color[1] == 0 and fill_color[2] == 0):
-                fill_color = [-1, -1, -1]
-
-            frame_info[f"roi{i + 1}_color_r"] = fill_color[0]
-            frame_info[f"roi{i + 1}_color_g"] = fill_color[1]
-            frame_info[f"roi{i + 1}_color_b"] = fill_color[2]
-
-            # Line Color
-            line_color = roi.lineColor
-            frame_info[f"roi{i + 1}_lineColor_r"] = line_color[0]
-            frame_info[f"roi{i + 1}_lineColor_g"] = line_color[1]
-            frame_info[f"roi{i + 1}_lineColor_b"] = line_color[2]
-
-        frame_data.append(frame_info)
-
-        # Adjust the target time so the first frame is at 0
-        target_time = row["time"] - time_offset
+        # Timing control for smooth playback
+        target_time = frame_times[idx]
         current_time = playbackClock.getTime()
-        wait_time = target_time - playbackClock.getTime()
-        if wait_time > 0.005:
-            core.wait(wait_time - 0.005)
-
-        while playbackClock.getTime() < target_time:
-            pass
-
+        wait_time = target_time - current_time
+        if wait_time > 0:
+            core.wait(wait_time)
+    
+    actual_playback_time = playbackClock.getTime()
+    print(f"SHAM playback complete. Collected {frame} volumes in {actual_playback_time:.1f}s")
 
 # End SHAM feedback loop
 
-# If feedback was displayed, save frame data
-if expInfo['feedback_on'] == 'Feedback':
-    df = pd.DataFrame(frame_data)  # Convert list to DataFrame
-    csv_filename = filename+'_frames.csv'
-    df.to_csv(csv_filename, index=False)  # Save CSV without index
-    print(f"Feedback frames saved to {csv_filename}")
-
-    # ADDITIONAL CODE FOR SHAM: Save to feedback directory if this is a Real participant
-    if not SHAM:  # Only save to feedback directory for real participants
-        # Create feedback directory structure
+# If REAL participant, also copy to feedback directory for SHAM use
+    if not SHAM:
         feedback_dir = os.path.join('feedback', filename_prefix + expInfo['participant'])
         if not os.path.exists(feedback_dir):
             os.makedirs(feedback_dir)
-            print(f"Created feedback directory: {feedback_dir}")
         
-        # Copy the frames file to feedback directory for future sham use
-        feedback_csv_filename = os.path.join(feedback_dir, 
-                                           os.path.basename(csv_filename))
-        shutil.copy2(csv_filename, feedback_csv_filename)
-        print(f"Copied feedback frames for sham use to: {feedback_csv_filename}")
-        
-        # Also copy the ROI outputs file
-        roi_outputs_filename = filename + '_roi_outputs.csv'
-        feedback_roi_filename = os.path.join(feedback_dir, 
-                                           os.path.basename(roi_outputs_filename))
-        shutil.copy2(roi_outputs_filename, feedback_roi_filename)
-        print(f"Copied ROI outputs for sham reference to: {feedback_roi_filename}")
-        
-        # Copy slider questions if they exist
-        slider_filename = filename + '_slider_questions.csv'
-        if os.path.exists(slider_filename):
-            feedback_slider_filename = os.path.join(feedback_dir, 
-                                                  os.path.basename(slider_filename))
-            shutil.copy2(slider_filename, feedback_slider_filename)
-            print(f"Copied slider questions for reference to: {feedback_slider_filename}")
+        feedback_frames_file = os.path.join(feedback_dir, os.path.basename(csv_filename))
+        shutil.copy2(csv_filename, feedback_frames_file)
+        print(f"Copied frames to feedback directory: {feedback_frames_file}")
 
 #------Prepare to start Routine "baseline"-------
 t = 0
 baselineClock.reset()  # clock 
 frameN = -1
-routineTimer.reset(1.00000)
+routineTimer.addTime(1.00000)
 # update component parameters for each repeat
 # keep track of which components have finished
 baselineComponents = []
@@ -1551,23 +1552,26 @@ else:
     next_run = int(expInfo['run']) + 1
     next_feedback='Feedback'
 
-# Add randomization to the next run parameters
-next_participant = expInfo['participant']
-next_randomization = expInfo['randomization']
+next_participant=expInfo['participant']
 anchor = expInfo['anchor']
 next_feedback_condition = expInfo['feedback_condition']
 
-# Update the subprocess calls
+# Shut down psychopy before starting next run
+quit_psychopy()
+
+
+next_randomization = expInfo['randomization']
+
 if expInfo['feedback_condition'] == '15min':
     if next_run < 6:
-        subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization), 
+        subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization),
             str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])
     else:
         print('Syncing OneDrive. Please wait')
-        subprocess.Popen(["onedrive", "--synchronize", "--single-directory", "'CHARMS/psychopy'", ">>",  "onedrive_log.tx"])
+        subprocess.Popen(["onedrive", "--synchronize", "--single-directory", "CHARMS/psychopy", ">>",  "onedrive_log.tx"])
 elif expInfo['feedback_condition'] == '30min':
     subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization),
         str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])
 
 # Quit python
-sys.exit('Done with run') 
+sys.exit('Done with run')

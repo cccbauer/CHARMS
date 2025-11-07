@@ -1,0 +1,10 @@
+data/
+feedback/
+*.psydat
+*.log
+__pycache__/
+psychopy/balltask/data/
+psychopy/balltask/feedback/
+*.psydat
+*.log
+__pycache__/

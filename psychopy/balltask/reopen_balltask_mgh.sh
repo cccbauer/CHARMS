@@ -5,10 +5,10 @@ source ~/psychopy_env/bin/activate
 
 # Pass command line arguments to script
 participant=$1
-run=$2
-feedback_on=$3
-condition=$4
-anchor=$5
+randomization=$2
+run=$3
+feedback_on=$4
+condition=$5
+anchor=$6
 
-python rt-network_feedback_mgh.py "$participant" "$run" "$feedback_on" "$condition" "$anchor"
-
+python rt-network_feedback_mgh.py "$participant" "$randomization" "$run" "$feedback_on" "$condition" "$anchor"
