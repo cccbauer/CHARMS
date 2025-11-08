@@ -96,7 +96,7 @@ expInfo = {'participant': input_participant, 'randomization': input_randomizatio
            'run': input_run, 'anchor': input_anchor, 'feedback_on': input_feedback,
            'feedback_condition': input_feedback_condition}
 # MURFI fake for debugging
-murfi_FAKE = True
+murfi_FAKE = False
 
 # Add popup warning if murfi_FAKE is True
 if murfi_FAKE:
@@ -118,6 +118,9 @@ if murfi_FAKE:
         else:
             print('Continuing with murfi_FAKE = True')
             screen_size=False
+else:
+    print('Continuing with murfi_FAKE = True')
+    screen_size=True
 
 # Show dialogue box until all participant info has been entered
 while (expInfo['feedback_on'] not in ['Feedback', 'No Feedback'] or 
@@ -377,14 +380,14 @@ else:
         expInfo['scale_factor'] = default_scale_factor
 
 ''' PREPARE THE SHAM PARTICIPANT BY COPYING THE MATCHED OR RANDOM REAL PARTICIPANT'''
-if SHAM:num_cmd_line_arguments = len(sys.argv)
-mapping_file = os.path.join('feedback', 'participant_mapping.txt')
-if not os.path.exists(mapping_file):
-    raise FileNotFoundError(
-        f"Participant mapping file not found at {mapping_file}.\n"
-        f"This file is created automatically when REAL participants are run.\n"
-        f"Please run at least one REAL participant first."
-    )
+if SHAM:
+    mapping_file = os.path.join('feedback', 'participant_mapping.txt')
+    if not os.path.exists(mapping_file):
+        raise FileNotFoundError(
+            f"Participant mapping file not found at {mapping_file}.\n"
+            f"This file is created automatically when REAL participants are run.\n"
+            f"Please run at least one REAL participant first."
+        )
 
     mapping_df = pd.read_csv(mapping_file, sep='\t', dtype={'randomization_id': str, 'participant_id': str})
 
@@ -438,8 +441,8 @@ if not os.path.exists(mapping_file):
         if is_dataset_complete(participant_id):
             matched_participant_id = participant_id
             matched_rand_id = row['randomization_id']
-            print(f"Using REAL participant {participant_id} (randomization {matched_rand_id}) "
-                 f"data for SHAM participant {expInfo['participant']} (randomization {rand_num:03d})")
+            #print(f"Using REAL participant {participant_id} (randomization {matched_rand_id}) "
+              #   f"data for SHAM participant {expInfo['participant']} (randomization {rand_num:03d})")
             break
     
     if matched_participant_id is None:
@@ -458,30 +461,23 @@ if not os.path.exists(mapping_file):
     # Actual subject directory for this SHAM participant
     feedback_csv_path = os.path.join("feedback", filename_prefix + expInfo['participant'])
     
-    # Try to copy from either location
-    if os.path.exists(match_feedback_csv_path_feedback):
-        if not os.path.exists(feedback_csv_path):
+
+    # Copy from REAL participant if folder doesn't exist
+    if not os.path.exists(feedback_csv_path):
+        if os.path.exists(match_feedback_csv_path_feedback):
             shutil.copytree(match_feedback_csv_path_feedback, feedback_csv_path)
-            print(f"Copied SHAM data from feedback directory: {match_feedback_csv_path_feedback}")
-    elif os.path.exists(match_feedback_csv_path_data):
-        if not os.path.exists(feedback_csv_path):
+            print(f"Copied data from feedback directory: {match_feedback_csv_path_feedback}")
+        elif os.path.exists(match_feedback_csv_path_data):
             os.makedirs(feedback_csv_path, exist_ok=True)
             for file in os.listdir(match_feedback_csv_path_data):
                 if 'feedback' in file and 'frames.csv' in file:
                     shutil.copy2(os.path.join(match_feedback_csv_path_data, file),
                                os.path.join(feedback_csv_path, file))
-            print(f"Copied SHAM data from data directory: {match_feedback_csv_path_data}")
-    else:
-        raise FileNotFoundError(
-            f"Cannot find data for matched REAL participant {sub_match}."
-        )
-
-'''
-For Sham subjects read the frame data from the csv file for the matching run in the 'feedback' folder
-There should exist a folder by the same subject number within the 'feedback' folder and it should 
-contain csv files from matched experimental subject having 'Feedback_{run_number}' in their name
-Each run should have a corresponding csv file
-'''
+            print(f"Copied data from data directory: {match_feedback_csv_path_data}")
+        else:
+            raise FileNotFoundError(
+                f"Cannot find data for matched REAL participant {sub_match}."
+            )
 
 if SHAM and expInfo['feedback_on'] == 'Feedback':
     # Construct the folder path dynamically
@@ -491,7 +487,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     if not os.path.exists(feedback_csv_path):
         raise FileNotFoundError(f"Folder '{feedback_csv_path}' does not exist.")
 
-    # Use fnmatch to match filenames like "*Feedback_<run>*.csv"
+    # Use fnmatch to match filenames like "*feedback_<run>_frames.csv"
     pattern = f"*feedback_{expInfo['run']}_frames.csv"
     matching_files = [f for f in os.listdir(feedback_csv_path) if fnmatch.fnmatch(f, pattern)]
     print(matching_files)
@@ -1166,7 +1162,7 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
         with open(filename+'_roi_outputs.csv', 'a') as csvfile:
             stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             print(([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]]))
-            stim_writer.writerow([frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2, roi_raw_activations[0], roi_raw_activations[1], 'feedback', hit_counter[0], hit_counter[1], pda_outlier, ball.pos[1], target_circles[0].pos[1], target_circles[1].pos[1]])   
+            stim_writer.writerow([frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2, roi_raw_activations[0], roi_raw_activations[1], 'feedback', hit_counter[0], hit_counter[1], pda_outlier, ball.pos[1], target_circles[0].pos[1], target_circles[1].pos[1]])
 
         # Increment the frame
         frame += 1
@@ -1252,8 +1248,8 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
 if SHAM and expInfo['feedback_on'] == 'Feedback':
     # Load the sham feedback CSV
     df_sham = pd.read_csv(csv_file)
-    print(f"Loaded SHAM feedback file: {csv_file}")
-    print(f"Total frames in CSV: {len(df_sham)}")
+    #print(f"Loaded SHAM feedback file: {csv_file}")
+    #print(f"Total frames in CSV: {len(df_sham)}")
 
     # Compute offset: first frame's time value
     time_offset = df_sham.iloc[0]["time"]
@@ -1280,8 +1276,8 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     if current_fps > 90:
         downsample_factor = int(current_fps / 60)
         df_sham = df_sham.iloc[::downsample_factor].reset_index(drop=True)
-        print(f"Downsampled from {current_fps:.1f}Hz to ~60Hz")
-        print(f"Reduced from {len(df_sham)*downsample_factor} to {len(df_sham)} frames")
+        #print(f"Downsampled from {current_fps:.1f}Hz to ~60Hz")
+        #print(f"Reduced from {len(df_sham)*downsample_factor} to {len(df_sham)} frames")
     
     # Pre-convert to numpy arrays for faster access
     ball_data = {
@@ -1309,13 +1305,13 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     
     frame_times = df_sham['time'].values - time_offset
     
-    # Filter to only include frames within 150 seconds
-    max_playback_time = 150.0
-    valid_indices = frame_times <= max_playback_time
-    num_valid_frames = np.sum(valid_indices)
+    # Filter to include all frames (let MURFI collection continue until data stops)
+    # This ensures we collect all 150 volumes even if timing is slightly off
+    num_valid_frames = len(df_sham)  # Use all downsampled frames
+    max_playback_time = frame_times[-1]  # Will run for full duration
     
-    print(f"Filtered to {num_valid_frames} frames within {max_playback_time:.1f}s")
-    print(f"Starting SHAM playback")
+    #print(f"Filtered to {num_valid_frames} frames within {max_playback_time:.1f}s")
+    #print(f"Starting SHAM playback")
     
 #    Loop only over valid frames (within 150s window)
     for idx in range(num_valid_frames):
@@ -1385,11 +1381,53 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
             core.wait(wait_time)
     
     actual_playback_time = playbackClock.getTime()
-    print(f"SHAM playback complete. Collected {frame} volumes in {actual_playback_time:.1f}s")
+    #print(f"SHAM visual playback complete in {actual_playback_time:.1f}s")
+    print(f"Waiting for final MURFI volumes...")
+    
+# Wait for last MURFI volumes to arrive (up to 5 TRs worth of time)
+    wait_start = playbackClock.getTime()
+    max_wait_time = expInfo['tr'] * 5  # 6 seconds for TR=1.2
+    target_volumes = 150  # We want exactly 150 total volumes
+    
+    while (playbackClock.getTime() - wait_start < max_wait_time) and (frame < target_volumes):
+        communicator.update()
+        roi_raw_activations = []
+        
+        try:
+            for i in range(n_roi):
+                roi_raw_i = communicator.get_roi_activation(roi_names_list[i], frame)
+                roi_raw_activations.append(roi_raw_i)
+        except:
+            roi_raw_activations = [np.nan, np.nan]
+        
+        if len(roi_raw_activations) >= 2 and not (np.isnan(roi_raw_activations[0]) or np.isnan(roi_raw_activations[1])):
+            with open(filename + '_roi_outputs.csv', 'a') as csvfile:
+                stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                print([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]])
+                stim_writer.writerow(
+                    [frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2,
+                     roi_raw_activations[0], roi_raw_activations[1], 'feedback', 0, 0, np.nan, np.nan, np.nan, np.nan])
+            frame += 1
+        
+        core.wait(0.1)  # Small wait between checks
+    
+
+    #print(f"SHAM playback complete. Collected {frame} volumes total")
+    if frame < target_volumes:
+        print(f"WARNING: Expected {target_volumes} volumes but only got {frame}")
+
 
 # End SHAM feedback loop
 
-# If REAL participant, also copy to feedback directory for SHAM use
+
+# If feedback was displayed, save frame data
+if expInfo['feedback_on'] == 'Feedback':
+    df = pd.DataFrame(frame_data)
+    csv_filename = filename+'_frames.csv'
+    df.to_csv(csv_filename, index=False)
+    print(f"Feedback frames saved to {csv_filename}")
+    
+    # If REAL participant, copy to feedback directory for SHAM use
     if not SHAM:
         feedback_dir = os.path.join('feedback', filename_prefix + expInfo['participant'])
         if not os.path.exists(feedback_dir):
@@ -1567,8 +1605,8 @@ if expInfo['feedback_condition'] == '15min':
         subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization),
             str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])
     else:
-        print('Syncing OneDrive. Please wait')
-        subprocess.Popen(["onedrive", "--synchronize", "--single-directory", "CHARMS/psychopy", ">>",  "onedrive_log.tx"])
+        print('enable if you like Syncing OneDrive. Please wait')
+        #subprocess.Popen(["onedrive", "--synchronize", "--single-directory", "CHARMS/psychopy", ">>",  "onedrive_log.tx"])
 elif expInfo['feedback_condition'] == '30min':
     subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization),
         str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])

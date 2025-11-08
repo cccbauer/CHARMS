@@ -1,884 +1,886 @@
-23.3796 	EXP 	DMN_BallTask: status = NOT_STARTED
-23.3849 	WARNING 	Requested an unavailable screen number - using first available.
-23.9103 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7241cfd59bd0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7241cfd59b70>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7241c43311e0>, multiSample=False, name='window1', numSamples=2, pos=(420, 32), screen=1, size=array([1080, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
-23.9103 	EXP 	window1: backgroundImage = None
-23.9104 	EXP 	window1: backgroundFit = 'cover'
-23.9123 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
-23.9123 	EXP 	window1: recordFrameIntervals = False
-23.9785 	EXP 	window1: recordFrameIntervals = True
-24.0547 	EXP 	Screen (1) actual frame rate measured at 144.76Hz
-24.0547 	EXP 	window1: recordFrameIntervals = False
-24.1159 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-24.1178 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1.2)
-24.1250 	EXP 	Created waiting_for_trigger_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='waiting_for_trigger_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='waiting for scanner', units='norm', win=Window(...), wrapWidth=2)
-24.1311 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.3), italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
-24.1379 	EXP 	Created text_relax = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.07), italic=False, languageStyle='LTR', name='text_relax', opacity=1, ori=0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='Relax', units='norm', win=Window(...), wrapWidth=1)
-24.1444 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='text_4', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='default text', units='norm', win=Window(...), wrapWidth=1)
-24.1556 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1558 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1622 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace='rgb', lineRGB=array([ 1,  1, -1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0.        , 0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.1700 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1701 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1755 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([0.35686275, 0.69411765, 0.80392157]), lineColorSpace='rgb', lineRGB=array([0.35686275, 0.69411765, 0.80392157]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([ 0.        , -0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.1818 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1819 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1874 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.5, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.1938 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1939 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1989 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.2043 	EXP 	Created instruct_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='instruct_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='replace me', units='norm', win=Window(...), wrapWidth=1.2)
-24.2099 	EXP 	Created thank_you_end_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='thank_you_end_run_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='thank you!', units='norm', win=Window(...), wrapWidth=1)
-24.2271 	EXP 	instruct_text: height = np.float64(0.06)
-24.2271 	EXP 	instruct_text: height = np.float64(0.06)
-24.2271 	EXP 	instruct_text: height = np.float64(0.06)
-24.2271 	EXP 	instruct_text: text = "Great job! Now, you're going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \n\nWhen the ball moves upwards, that corresponds to the describing practice."
-26.2899 	DATA 	Keypress: 2
-26.7800 	DATA 	Keypress: space
-26.7900 	EXP 	instruct_text: height = np.float64(0.06)
-26.7900 	EXP 	instruct_text: height = np.float64(0.06)
-26.7900 	EXP 	instruct_text: height = np.float64(0.06)
-26.7900 	EXP 	instruct_text: text = 'When you see the plus sign (+), just relax.\n\nOnce the circles appear, please start the Describing practice. This scan will last 2.5 min.'
-27.1949 	DATA 	Keypress: space
-27.1987 	EXP 	waiting_for_trigger_text: autoDraw = True
-29.3757 	DATA 	Keypress: 5
-29.3827 	EXP 	waiting_for_trigger_text: autoDraw = False
-29.3827 	EXP 	text_2: autoDraw = True
-29.3827 	EXP 	text_relax: autoDraw = True
-59.3828 	EXP 	text_2: autoDraw = False
-59.3828 	EXP 	text_relax: autoDraw = False
-59.3828 	EXP 	text_2: autoDraw = False
-59.4171 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-59.4171 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-60.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-60.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-61.8210 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-61.8210 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-63.0220 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-63.0220 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-64.2238 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-64.2238 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-65.4312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-65.4312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-66.6321 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-66.6321 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-67.8337 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-67.8337 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-69.0350 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-69.0350 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-70.2364 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-70.2364 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-71.4384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-71.4384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-72.6404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-72.6404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-73.8410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-73.8410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-75.0425 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-75.0425 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-76.2441 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-76.2441 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-77.4443 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-77.4443 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-78.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-78.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-79.8477 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-79.8477 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-81.0493 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-81.0493 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-82.2524 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-82.2524 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-83.4579 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-83.4579 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-84.6601 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-84.6601 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-85.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-85.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-87.0622 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-87.0622 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-88.2643 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-88.2643 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-89.4809 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-89.4809 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-90.6676 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-90.6676 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-91.8693 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-91.8693 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-93.0704 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-93.0704 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-94.2717 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-94.2717 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-95.4718 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-95.4718 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-96.6728 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-96.6728 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-97.8752 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-97.8752 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-99.0883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-99.0883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-99.0883 	EXP 	unnamed Circle: radius = np.float64(0.135)
-99.0883 	EXP 	unnamed Circle: fillColor = 'white'
-100.2782 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-100.2782 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-101.4791 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-101.4791 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-102.6817 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-102.6817 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-103.8832 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-103.8832 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-105.0837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-105.0837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-106.2850 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-106.2850 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-107.4944 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-107.4944 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-107.4944 	EXP 	unnamed Circle: radius = np.float64(0.12150000000000001)
-107.4944 	EXP 	unnamed Circle: fillColor = 'white'
-108.6881 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-108.6881 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-109.8894 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-109.8894 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-111.0911 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-111.0911 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-112.2925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-112.2925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-113.5359 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-113.5359 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-114.7434 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-114.7434 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-115.9450 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-115.9450 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-117.1470 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-117.1470 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-118.3541 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-118.3541 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-119.5552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-119.5552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-120.7575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-120.7575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-121.9573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-121.9573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-123.1592 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-123.1592 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-124.3608 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-124.3608 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-125.5629 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-125.5629 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-126.7635 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-126.7635 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-127.9653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-127.9653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-129.1665 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-129.1665 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-130.3682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-130.3682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-131.5700 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-131.5700 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-132.7711 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-132.7711 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-133.9794 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-133.9794 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-135.1816 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-135.1816 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-136.3905 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-136.3905 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-136.3905 	EXP 	unnamed Circle: radius = np.float64(0.10935000000000002)
-136.3905 	EXP 	unnamed Circle: fillColor = 'white'
-137.5846 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-137.5846 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-138.7853 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-138.7853 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-139.9866 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-139.9866 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-141.1879 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-141.1879 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-142.3883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-142.3883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-143.5903 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-143.5903 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-144.7925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-144.7925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-145.9941 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-145.9941 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-147.2090 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-147.2090 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-147.2090 	EXP 	unnamed Circle: radius = np.float64(0.09841500000000002)
-147.2090 	EXP 	unnamed Circle: fillColor = 'white'
-148.3966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-148.3966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-149.5972 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-149.5972 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-150.7986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-150.7986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-151.9999 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-151.9999 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-153.2017 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-153.2017 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-154.4022 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-154.4022 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-155.6048 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-155.6048 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-156.8050 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-156.8050 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-158.0065 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-158.0065 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-159.2085 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-159.2085 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-160.4158 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-160.4158 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-161.6165 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-161.6165 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-162.8196 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-162.8196 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-164.0203 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-164.0203 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-165.2224 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-165.2224 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-166.4243 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-166.4243 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-167.6256 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-167.6256 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-168.8271 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-168.8271 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-170.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-170.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-170.0348 	EXP 	unnamed Circle: radius = np.float64(0.08857350000000001)
-170.0348 	EXP 	unnamed Circle: fillColor = 'white'
-171.2300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-171.2300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-172.4305 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-172.4305 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-173.6320 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-173.6320 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-174.8332 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-174.8332 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-176.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-176.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-177.2365 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-177.2365 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-178.4370 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-178.4370 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-179.6391 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-179.6391 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-180.8404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-180.8404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-182.0417 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-182.0417 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-183.2439 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-183.2439 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-184.4442 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-184.4442 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-185.6453 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-185.6453 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-186.8458 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-186.8458 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-188.0476 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-188.0476 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-189.2497 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-189.2497 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-190.4512 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-190.4512 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-191.6518 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-191.6518 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-192.8534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-192.8534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-194.0558 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-194.0558 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-195.2573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-195.2573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-196.4580 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-196.4580 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-197.6595 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-197.6595 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-198.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-198.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-200.0626 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-200.0626 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-201.2640 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-201.2640 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-202.4653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-202.4653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-203.6725 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-203.6725 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-204.8737 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-204.8737 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-206.0761 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-206.0761 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-207.2776 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-207.2776 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-208.4790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-208.4790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-209.8079 	EXP 	text_2: autoDraw = True
-210.8117 	EXP 	text_2: autoDraw = False
-212.7661 	DATA 	Keypress: 2
-212.7729 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-212.7805 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.7919 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.8013 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.8097 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.8206 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'Always'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-212.8308 	EXP 	None: autoLog = True
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: contrast = 1.0
-212.8308 	EXP 	None: markerPos = None
-212.8308 	EXP 	None: autoLog = True
-212.8308 	EXP 	None: markerPos = 5
-212.9227 	DATA 	Keypress: 0
-212.9274 	EXP 	None: markerPos = 5
-212.9317 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-212.9384 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9430 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9473 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9543 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9648 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'All the time'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-212.9733 	EXP 	None: autoLog = True
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: contrast = 1.0
-212.9733 	EXP 	None: markerPos = None
-212.9733 	EXP 	None: autoLog = True
-212.9733 	EXP 	None: markerPos = 5
-212.9909 	DATA 	Keypress: 2
-212.9969 	EXP 	None: markerPos = 6
-213.0947 	DATA 	Keypress: 0
-213.0993 	EXP 	None: markerPos = 6
-213.1029 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-213.1096 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1160 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1206 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1288 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1394 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very Difficult'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-213.1480 	EXP 	None: autoLog = True
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: contrast = 1.0
-213.1480 	EXP 	None: markerPos = None
-213.1480 	EXP 	None: autoLog = True
-213.1480 	EXP 	None: markerPos = 5
-213.1858 	DATA 	Keypress: 2
-213.1903 	EXP 	None: markerPos = 6
-213.2870 	DATA 	Keypress: 0
-213.2917 	EXP 	None: markerPos = 6
-213.2952 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='How calm do you feel right now?', units='norm', win=Window(...), wrapWidth=1.2)
-213.3012 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3064 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3110 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3157 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3265 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very calm'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-213.3327 	EXP 	None: autoLog = True
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: contrast = 1.0
-213.3327 	EXP 	None: markerPos = None
-213.3327 	EXP 	None: autoLog = True
-213.3327 	EXP 	None: markerPos = 5
-213.9955 	DATA 	Keypress: 2
-214.0002 	EXP 	None: markerPos = 6
-215.3563 	DATA 	Keypress: 0
-215.3614 	EXP 	None: markerPos = 6
-215.3677 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-215.3747 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.3817 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.3862 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.3906 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.4007 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-215.4078 	EXP 	None: autoLog = True
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: contrast = 1.0
-215.4078 	EXP 	None: markerPos = None
-215.4078 	EXP 	None: autoLog = True
-215.4078 	EXP 	None: markerPos = 5
-215.8833 	DATA 	Keypress: 0
-215.8879 	EXP 	None: markerPos = 5
-215.8923 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-215.8995 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9046 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9099 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9148 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9264 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-215.9333 	EXP 	None: autoLog = True
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: contrast = 1.0
-215.9333 	EXP 	None: markerPos = None
-215.9333 	EXP 	None: autoLog = True
-215.9333 	EXP 	None: markerPos = 5
-216.4452 	DATA 	Keypress: 2
-216.4503 	EXP 	None: markerPos = 6
-216.5664 	DATA 	Keypress: 0
-216.5720 	EXP 	None: markerPos = 6
-216.5775 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-216.5852 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.5907 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.5959 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.6011 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.6141 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-216.6222 	EXP 	None: autoLog = True
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: contrast = 1.0
-216.6222 	EXP 	None: markerPos = None
-216.6222 	EXP 	None: autoLog = True
-216.6222 	EXP 	None: markerPos = 5
-217.0322 	DATA 	Keypress: 2
-217.0371 	EXP 	None: markerPos = 6
-217.1735 	DATA 	Keypress: 0
-217.1774 	EXP 	None: markerPos = 6
-219.8717 	DATA 	Keypress: lalt
-23.3796 	EXP 	DMN_BallTask: status = NOT_STARTED
-23.3849 	WARNING 	Requested an unavailable screen number - using first available.
-23.9103 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7241cfd59bd0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7241cfd59b70>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7241c43311e0>, multiSample=False, name='window1', numSamples=2, pos=(420, 32), screen=1, size=array([1080, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
-23.9103 	EXP 	window1: backgroundImage = None
-23.9104 	EXP 	window1: backgroundFit = 'cover'
-23.9123 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
-23.9123 	EXP 	window1: recordFrameIntervals = False
-23.9785 	EXP 	window1: recordFrameIntervals = True
-24.0547 	EXP 	Screen (1) actual frame rate measured at 144.76Hz
-24.0547 	EXP 	window1: recordFrameIntervals = False
-24.1159 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-24.1178 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1.2)
-24.1250 	EXP 	Created waiting_for_trigger_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='waiting_for_trigger_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='waiting for scanner', units='norm', win=Window(...), wrapWidth=2)
-24.1311 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.3), italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
-24.1379 	EXP 	Created text_relax = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.07), italic=False, languageStyle='LTR', name='text_relax', opacity=1, ori=0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='Relax', units='norm', win=Window(...), wrapWidth=1)
-24.1444 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='text_4', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='default text', units='norm', win=Window(...), wrapWidth=1)
-24.1556 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1558 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1622 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace='rgb', lineRGB=array([ 1,  1, -1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0.        , 0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.1700 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1701 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1755 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([0.35686275, 0.69411765, 0.80392157]), lineColorSpace='rgb', lineRGB=array([0.35686275, 0.69411765, 0.80392157]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([ 0.        , -0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.1818 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1819 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1874 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.5, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.1938 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1939 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
-24.1989 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
-24.2043 	EXP 	Created instruct_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='instruct_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='replace me', units='norm', win=Window(...), wrapWidth=1.2)
-24.2099 	EXP 	Created thank_you_end_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='thank_you_end_run_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='thank you!', units='norm', win=Window(...), wrapWidth=1)
-24.2271 	EXP 	instruct_text: height = np.float64(0.06)
-24.2271 	EXP 	instruct_text: height = np.float64(0.06)
-24.2271 	EXP 	instruct_text: height = np.float64(0.06)
-24.2271 	EXP 	instruct_text: text = "Great job! Now, you're going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \n\nWhen the ball moves upwards, that corresponds to the describing practice."
-26.2899 	DATA 	Keypress: 2
-26.7800 	DATA 	Keypress: space
-26.7900 	EXP 	instruct_text: height = np.float64(0.06)
-26.7900 	EXP 	instruct_text: height = np.float64(0.06)
-26.7900 	EXP 	instruct_text: height = np.float64(0.06)
-26.7900 	EXP 	instruct_text: text = 'When you see the plus sign (+), just relax.\n\nOnce the circles appear, please start the Describing practice. This scan will last 2.5 min.'
-27.1949 	DATA 	Keypress: space
-27.1987 	EXP 	waiting_for_trigger_text: autoDraw = True
-29.3757 	DATA 	Keypress: 5
-29.3827 	EXP 	waiting_for_trigger_text: autoDraw = False
-29.3827 	EXP 	text_2: autoDraw = True
-29.3827 	EXP 	text_relax: autoDraw = True
-59.3828 	EXP 	text_2: autoDraw = False
-59.3828 	EXP 	text_relax: autoDraw = False
-59.3828 	EXP 	text_2: autoDraw = False
-59.4171 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-59.4171 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-60.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-60.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-61.8210 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-61.8210 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-63.0220 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-63.0220 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-64.2238 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-64.2238 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-65.4312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-65.4312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-66.6321 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-66.6321 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-67.8337 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-67.8337 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-69.0350 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-69.0350 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-70.2364 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-70.2364 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-71.4384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-71.4384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-72.6404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-72.6404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-73.8410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-73.8410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-75.0425 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-75.0425 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-76.2441 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-76.2441 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-77.4443 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-77.4443 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-78.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-78.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-79.8477 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-79.8477 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-81.0493 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-81.0493 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-82.2524 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-82.2524 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-83.4579 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-83.4579 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-84.6601 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-84.6601 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-85.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-85.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-87.0622 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-87.0622 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-88.2643 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-88.2643 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-89.4809 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-89.4809 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-90.6676 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-90.6676 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-91.8693 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-91.8693 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-93.0704 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-93.0704 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-94.2717 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-94.2717 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-95.4718 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-95.4718 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-96.6728 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-96.6728 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-97.8752 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-97.8752 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-99.0883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-99.0883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-99.0883 	EXP 	unnamed Circle: radius = np.float64(0.135)
-99.0883 	EXP 	unnamed Circle: fillColor = 'white'
-100.2782 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-100.2782 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-101.4791 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-101.4791 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-102.6817 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-102.6817 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-103.8832 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-103.8832 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-105.0837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-105.0837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-106.2850 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-106.2850 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-107.4944 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-107.4944 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-107.4944 	EXP 	unnamed Circle: radius = np.float64(0.12150000000000001)
-107.4944 	EXP 	unnamed Circle: fillColor = 'white'
-108.6881 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-108.6881 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-109.8894 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-109.8894 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-111.0911 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-111.0911 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-112.2925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-112.2925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-113.5359 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-113.5359 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-114.7434 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-114.7434 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-115.9450 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-115.9450 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-117.1470 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-117.1470 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-118.3541 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-118.3541 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-119.5552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-119.5552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-120.7575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-120.7575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-121.9573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-121.9573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-123.1592 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-123.1592 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-124.3608 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-124.3608 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-125.5629 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-125.5629 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-126.7635 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-126.7635 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-127.9653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-127.9653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-129.1665 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-129.1665 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-130.3682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-130.3682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-131.5700 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-131.5700 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-132.7711 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-132.7711 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-133.9794 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-133.9794 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-135.1816 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-135.1816 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-136.3905 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-136.3905 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-136.3905 	EXP 	unnamed Circle: radius = np.float64(0.10935000000000002)
-136.3905 	EXP 	unnamed Circle: fillColor = 'white'
-137.5846 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-137.5846 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-138.7853 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-138.7853 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-139.9866 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-139.9866 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-141.1879 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-141.1879 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-142.3883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-142.3883 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-143.5903 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-143.5903 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-144.7925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-144.7925 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-145.9941 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-145.9941 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-147.2090 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-147.2090 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-147.2090 	EXP 	unnamed Circle: radius = np.float64(0.09841500000000002)
-147.2090 	EXP 	unnamed Circle: fillColor = 'white'
-148.3966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-148.3966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-149.5972 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-149.5972 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-150.7986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-150.7986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-151.9999 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-151.9999 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-153.2017 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-153.2017 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-154.4022 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-154.4022 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-155.6048 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-155.6048 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-156.8050 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-156.8050 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-158.0065 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-158.0065 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-159.2085 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-159.2085 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-160.4158 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-160.4158 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-161.6165 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-161.6165 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-162.8196 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-162.8196 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-164.0203 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-164.0203 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-165.2224 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-165.2224 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-166.4243 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-166.4243 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-167.6256 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-167.6256 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-168.8271 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-168.8271 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-170.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-170.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-170.0348 	EXP 	unnamed Circle: radius = np.float64(0.08857350000000001)
-170.0348 	EXP 	unnamed Circle: fillColor = 'white'
-171.2300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-171.2300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-172.4305 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-172.4305 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-173.6320 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-173.6320 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-174.8332 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-174.8332 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-176.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-176.0348 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-177.2365 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-177.2365 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-178.4370 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-178.4370 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-179.6391 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-179.6391 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-180.8404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-180.8404 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-182.0417 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-182.0417 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-183.2439 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-183.2439 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-184.4442 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-184.4442 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-185.6453 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-185.6453 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-186.8458 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-186.8458 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-188.0476 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-188.0476 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-189.2497 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-189.2497 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-190.4512 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-190.4512 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-191.6518 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-191.6518 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-192.8534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-192.8534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-194.0558 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-194.0558 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-195.2573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-195.2573 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-196.4580 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-196.4580 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-197.6595 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-197.6595 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-198.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-198.8614 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-200.0626 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-200.0626 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-201.2640 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-201.2640 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-202.4653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-202.4653 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-203.6725 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-203.6725 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-204.8737 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-204.8737 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-206.0761 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-206.0761 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-207.2776 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-207.2776 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-208.4790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-208.4790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
-209.8079 	EXP 	text_2: autoDraw = True
-210.8117 	EXP 	text_2: autoDraw = False
-212.7661 	DATA 	Keypress: 2
-212.7729 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-212.7805 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.7919 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.8013 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.8097 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.8206 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'Always'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-212.8308 	EXP 	None: autoLog = True
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: styleTweaks = []
-212.8308 	EXP 	None: contrast = 1.0
-212.8308 	EXP 	None: markerPos = None
-212.8308 	EXP 	None: autoLog = True
-212.8308 	EXP 	None: markerPos = 5
-212.9227 	DATA 	Keypress: 0
-212.9274 	EXP 	None: markerPos = 5
-212.9317 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-212.9384 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9430 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9473 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9543 	WARNING 	Font b'Arial' was requested. No similar font found.
-212.9648 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'All the time'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-212.9733 	EXP 	None: autoLog = True
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: styleTweaks = []
-212.9733 	EXP 	None: contrast = 1.0
-212.9733 	EXP 	None: markerPos = None
-212.9733 	EXP 	None: autoLog = True
-212.9733 	EXP 	None: markerPos = 5
-212.9909 	DATA 	Keypress: 2
-212.9969 	EXP 	None: markerPos = 6
-213.0947 	DATA 	Keypress: 0
-213.0993 	EXP 	None: markerPos = 6
-213.1029 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-213.1096 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1160 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1206 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1288 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.1394 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very Difficult'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-213.1480 	EXP 	None: autoLog = True
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: styleTweaks = []
-213.1480 	EXP 	None: contrast = 1.0
-213.1480 	EXP 	None: markerPos = None
-213.1480 	EXP 	None: autoLog = True
-213.1480 	EXP 	None: markerPos = 5
-213.1858 	DATA 	Keypress: 2
-213.1903 	EXP 	None: markerPos = 6
-213.2870 	DATA 	Keypress: 0
-213.2917 	EXP 	None: markerPos = 6
-213.2952 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='How calm do you feel right now?', units='norm', win=Window(...), wrapWidth=1.2)
-213.3012 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3064 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3110 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3157 	WARNING 	Font b'Arial' was requested. No similar font found.
-213.3265 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very calm'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-213.3327 	EXP 	None: autoLog = True
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: styleTweaks = []
-213.3327 	EXP 	None: contrast = 1.0
-213.3327 	EXP 	None: markerPos = None
-213.3327 	EXP 	None: autoLog = True
-213.3327 	EXP 	None: markerPos = 5
-213.9955 	DATA 	Keypress: 2
-214.0002 	EXP 	None: markerPos = 6
-215.3563 	DATA 	Keypress: 0
-215.3614 	EXP 	None: markerPos = 6
-215.3677 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-215.3747 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.3817 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.3862 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.3906 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.4007 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-215.4078 	EXP 	None: autoLog = True
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: styleTweaks = []
-215.4078 	EXP 	None: contrast = 1.0
-215.4078 	EXP 	None: markerPos = None
-215.4078 	EXP 	None: autoLog = True
-215.4078 	EXP 	None: markerPos = 5
-215.8833 	DATA 	Keypress: 0
-215.8879 	EXP 	None: markerPos = 5
-215.8923 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-215.8995 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9046 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9099 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9148 	WARNING 	Font b'Arial' was requested. No similar font found.
-215.9264 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-215.9333 	EXP 	None: autoLog = True
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: styleTweaks = []
-215.9333 	EXP 	None: contrast = 1.0
-215.9333 	EXP 	None: markerPos = None
-215.9333 	EXP 	None: autoLog = True
-215.9333 	EXP 	None: markerPos = 5
-216.4452 	DATA 	Keypress: 2
-216.4503 	EXP 	None: markerPos = 6
-216.5664 	DATA 	Keypress: 0
-216.5720 	EXP 	None: markerPos = 6
-216.5775 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
-216.5852 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.5907 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.5959 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.6011 	WARNING 	Font b'Arial' was requested. No similar font found.
-216.6141 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
-216.6222 	EXP 	None: autoLog = True
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: styleTweaks = []
-216.6222 	EXP 	None: contrast = 1.0
-216.6222 	EXP 	None: markerPos = None
-216.6222 	EXP 	None: autoLog = True
-216.6222 	EXP 	None: markerPos = 5
-217.0322 	DATA 	Keypress: 2
-217.0371 	EXP 	None: markerPos = 6
-217.1735 	DATA 	Keypress: 0
-217.1774 	EXP 	None: markerPos = 6
-219.8717 	DATA 	Keypress: lalt
+4.0473 	EXP 	DMN_BallTask: status = NOT_STARTED
+4.0502 	WARNING 	Requested an unavailable screen number - using first available.
+4.3732 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7bee6f3d3460>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7bee6f3d3400>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7bee6769ea40>, multiSample=False, name='window1', numSamples=2, pos=(420, 32), screen=1, size=array([1080, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.3733 	EXP 	window1: backgroundImage = None
+4.3733 	EXP 	window1: backgroundFit = 'cover'
+4.3758 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
+4.3758 	EXP 	window1: recordFrameIntervals = False
+4.4423 	EXP 	window1: recordFrameIntervals = True
+4.5189 	EXP 	Screen (1) actual frame rate measured at 143.40Hz
+4.5189 	EXP 	window1: recordFrameIntervals = False
+4.5606 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+4.5612 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1.2)
+4.5642 	EXP 	Created waiting_for_trigger_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='waiting_for_trigger_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='waiting for scanner', units='norm', win=Window(...), wrapWidth=2)
+4.5666 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.3), italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+4.5692 	EXP 	Created text_relax = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.07), italic=False, languageStyle='LTR', name='text_relax', opacity=1, ori=0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='Relax', units='norm', win=Window(...), wrapWidth=1)
+4.5716 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='text_4', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='default text', units='norm', win=Window(...), wrapWidth=1)
+4.5773 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5774 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5809 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace='rgb', lineRGB=array([ 1,  1, -1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0.        , 0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.5854 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5855 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5889 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([0.35686275, 0.69411765, 0.80392157]), lineColorSpace='rgb', lineRGB=array([0.35686275, 0.69411765, 0.80392157]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([ 0.        , -0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.5933 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5934 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5968 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.5, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.6010 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.6011 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.6044 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.6071 	EXP 	Created instruct_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='instruct_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='replace me', units='norm', win=Window(...), wrapWidth=1.2)
+4.6091 	EXP 	Created thank_you_end_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='thank_you_end_run_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='thank you!', units='norm', win=Window(...), wrapWidth=1)
+4.6159 	EXP 	instruct_text: height = np.float64(0.06)
+4.6159 	EXP 	instruct_text: height = np.float64(0.06)
+4.6159 	EXP 	instruct_text: height = np.float64(0.06)
+4.6159 	EXP 	instruct_text: text = 'Great job! Now, you’re going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \n\nWhen the ball moves upwards, that corresponds to the describing practice.'
+5.5975 	DATA 	Keypress: space
+5.6022 	EXP 	instruct_text: height = np.float64(0.06)
+5.6022 	EXP 	instruct_text: height = np.float64(0.06)
+5.6022 	EXP 	instruct_text: height = np.float64(0.06)
+5.6022 	EXP 	instruct_text: text = 'When you see the plus sign (+), just relax.\n\nOnce the circles appear, please start the Describing practice. This scan will last 2.5 min.'
+5.7489 	DATA 	Keypress: space
+5.7515 	EXP 	waiting_for_trigger_text: autoDraw = True
+5.8865 	DATA 	Keypress: space
+5.9913 	DATA 	Keypress: 5
+5.9988 	EXP 	waiting_for_trigger_text: autoDraw = False
+5.9988 	EXP 	text_2: autoDraw = True
+5.9988 	EXP 	text_relax: autoDraw = True
+36.0020 	EXP 	text_2: autoDraw = False
+36.0020 	EXP 	text_relax: autoDraw = False
+36.0020 	EXP 	text_2: autoDraw = False
+36.9966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+36.9966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+38.1966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+38.1966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+39.3980 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+39.3980 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+40.6001 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+40.6001 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+41.8060 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+41.8060 	EXP 	unnamed Circle: radius = np.float64(0.135)
+41.8060 	EXP 	unnamed Circle: fillColor = 'white'
+41.8060 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+43.0027 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+43.0027 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+44.2036 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+44.2036 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+45.4056 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+45.4056 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+46.6073 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+46.6073 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+47.8081 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+47.8081 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+49.0098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+49.0098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+50.2109 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+50.2109 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+51.4125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+51.4125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+52.6135 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+52.6135 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+53.8153 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+53.8153 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+55.0169 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+55.0169 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+56.2176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+56.2176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+57.4202 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+57.4202 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+58.6266 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+58.6266 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+59.8289 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+59.8289 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+61.0306 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+61.0306 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+62.2312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+62.2312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+63.4328 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+63.4328 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+64.6411 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+64.6411 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+64.6411 	EXP 	unnamed Circle: radius = np.float64(0.135)
+64.6411 	EXP 	unnamed Circle: fillColor = 'white'
+65.8355 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+65.8355 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+67.0374 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+67.0374 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+68.2384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+68.2384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+69.4403 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+69.4403 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+70.6414 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+70.6414 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+71.8429 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+71.8429 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+73.0444 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+73.0444 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+74.2447 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+74.2447 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+75.4481 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+75.4481 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+76.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+76.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+77.8561 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+77.8561 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+77.8561 	EXP 	unnamed Circle: radius = np.float64(0.12150000000000001)
+77.8561 	EXP 	unnamed Circle: fillColor = 'white'
+79.0509 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+79.0509 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+80.2517 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+80.2517 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+81.4534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+81.4534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+82.6552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+82.6552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+83.8565 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+83.8565 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+85.0575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+85.0575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+86.2651 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+86.2651 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+87.4679 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+87.4679 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+88.6682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+88.6682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+89.8702 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+89.8702 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+91.0722 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+91.0722 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+92.2801 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+92.2801 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+93.4822 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+93.4822 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+94.6825 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+94.6825 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+95.8833 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+95.8833 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+97.0862 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+97.0862 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+98.2865 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+98.2865 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+99.4886 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+99.4886 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+100.6901 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+100.6901 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+101.8904 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+101.8904 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+103.0927 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+103.0927 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+104.2933 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+104.2933 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+105.4947 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+105.4947 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+106.6960 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+106.6960 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+107.8986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+107.8986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+109.1005 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+109.1005 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+110.3066 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+110.3066 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+111.5089 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+111.5089 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+112.7098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+112.7098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+113.9120 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+113.9120 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+115.1133 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+115.1133 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+116.3141 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+116.3141 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+117.5154 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+117.5154 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+118.7170 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+118.7170 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+119.9188 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+119.9188 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+121.1194 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+121.1194 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+122.3215 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+122.3215 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+123.5230 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+123.5230 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+124.7309 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+124.7309 	EXP 	unnamed Circle: radius = np.float64(0.12150000000000001)
+124.7309 	EXP 	unnamed Circle: fillColor = 'white'
+124.7309 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+125.9252 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+125.9252 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+127.1268 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+127.1268 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+128.3281 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+128.3281 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+129.5300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+129.5300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+130.7307 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+130.7307 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+131.9322 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+131.9322 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+133.1344 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+133.1344 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+134.3349 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+134.3349 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+135.5371 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+135.5371 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+136.7375 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+136.7375 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+137.9394 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+137.9394 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+139.1410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+139.1410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+140.3418 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+140.3418 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+141.5525 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+141.5525 	EXP 	unnamed Circle: radius = np.float64(0.10935000000000002)
+141.5525 	EXP 	unnamed Circle: fillColor = 'white'
+141.5525 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+142.7448 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+142.7448 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+143.9457 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+143.9457 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+145.1536 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+145.1536 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+146.3556 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+146.3556 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+147.5582 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+147.5582 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+148.7647 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+148.7647 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+149.9666 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+149.9666 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+151.1688 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+151.1688 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+152.3697 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+152.3697 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+153.5713 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+153.5713 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+154.7719 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+154.7719 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+155.9738 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+155.9738 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+157.1755 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+157.1755 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+158.3767 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+158.3767 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+159.5785 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+159.5785 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+160.7790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+160.7790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+161.9807 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+161.9807 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+163.1820 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+163.1820 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+164.3837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+164.3837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+165.5852 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+165.5852 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+166.7924 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+166.7924 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+167.9949 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+167.9949 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+169.1955 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+169.1955 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+170.3969 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+170.3969 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+171.5986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+171.5986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+172.7997 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+172.7997 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+174.0015 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+174.0015 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+175.2039 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+175.2039 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+176.4106 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+176.4106 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+177.6125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+177.6125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+178.8136 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+178.8136 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+180.0239 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+180.0239 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+180.0239 	EXP 	unnamed Circle: radius = np.float64(0.10935000000000002)
+180.0239 	EXP 	unnamed Circle: fillColor = 'white'
+181.2166 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+181.2166 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+182.4176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+182.4176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+183.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+183.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+184.8206 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+184.8206 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+186.0611 	EXP 	text_2: autoDraw = True
+187.0017 	EXP 	text_2: autoDraw = False
+188.6047 	DATA 	Keypress: 2
+188.6082 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+188.6130 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6210 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6276 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6337 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6407 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'Always'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+188.6482 	EXP 	None: autoLog = True
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: contrast = 1.0
+188.6482 	EXP 	None: markerPos = None
+188.6482 	EXP 	None: autoLog = True
+188.6482 	EXP 	None: markerPos = 5
+188.7108 	DATA 	Keypress: 0
+188.7138 	EXP 	None: markerPos = 5
+188.7160 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+188.7198 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7230 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7259 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7307 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7376 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'All the time'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+188.7426 	EXP 	None: autoLog = True
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: contrast = 1.0
+188.7426 	EXP 	None: markerPos = None
+188.7426 	EXP 	None: autoLog = True
+188.7426 	EXP 	None: markerPos = 5
+188.8018 	DATA 	Keypress: 2
+188.8047 	EXP 	None: markerPos = 6
+188.9030 	DATA 	Keypress: 0
+188.9057 	EXP 	None: markerPos = 6
+188.9077 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+188.9112 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9154 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9183 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9240 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9310 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very Difficult'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+188.9372 	EXP 	None: autoLog = True
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: contrast = 1.0
+188.9372 	EXP 	None: markerPos = None
+188.9372 	EXP 	None: autoLog = True
+188.9372 	EXP 	None: markerPos = 5
+189.0042 	DATA 	Keypress: 2
+189.0072 	EXP 	None: markerPos = 6
+189.1002 	DATA 	Keypress: 0
+189.1031 	EXP 	None: markerPos = 6
+189.1052 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='How calm do you feel right now?', units='norm', win=Window(...), wrapWidth=1.2)
+189.1088 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1119 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1148 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1178 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1249 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very calm'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+189.1288 	EXP 	None: autoLog = True
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: contrast = 1.0
+189.1288 	EXP 	None: markerPos = None
+189.1288 	EXP 	None: autoLog = True
+189.1288 	EXP 	None: markerPos = 5
+189.1761 	DATA 	Keypress: 2
+189.1789 	EXP 	None: markerPos = 6
+189.3126 	DATA 	Keypress: 0
+189.3157 	EXP 	None: markerPos = 6
+189.3184 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+189.3223 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3265 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3294 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3323 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3397 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+189.3448 	EXP 	None: autoLog = True
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: contrast = 1.0
+189.3448 	EXP 	None: markerPos = None
+189.3448 	EXP 	None: autoLog = True
+189.3448 	EXP 	None: markerPos = 5
+189.3449 	DATA 	Keypress: 2
+189.3476 	EXP 	None: markerPos = 6
+189.5250 	DATA 	Keypress: 0
+189.5278 	EXP 	None: markerPos = 6
+189.5301 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+189.5336 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5367 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5397 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5426 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5495 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+189.5536 	EXP 	None: autoLog = True
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: contrast = 1.0
+189.5536 	EXP 	None: markerPos = None
+189.5536 	EXP 	None: autoLog = True
+189.5536 	EXP 	None: markerPos = 5
+189.6768 	DATA 	Keypress: 2
+189.6796 	EXP 	None: markerPos = 6
+189.9852 	DATA 	Keypress: 0
+189.9882 	EXP 	None: markerPos = 6
+189.9904 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+189.9941 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.9973 	WARNING 	Font b'Arial' was requested. No similar font found.
+190.0002 	WARNING 	Font b'Arial' was requested. No similar font found.
+190.0031 	WARNING 	Font b'Arial' was requested. No similar font found.
+190.0100 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+190.0138 	EXP 	None: autoLog = True
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: contrast = 1.0
+190.0138 	EXP 	None: markerPos = None
+190.0138 	EXP 	None: autoLog = True
+190.0138 	EXP 	None: markerPos = 5
+190.1141 	DATA 	Keypress: 2
+190.1171 	EXP 	None: markerPos = 6
+190.2989 	DATA 	Keypress: 0
+190.3019 	EXP 	None: markerPos = 6
+4.0473 	EXP 	DMN_BallTask: status = NOT_STARTED
+4.0502 	WARNING 	Requested an unavailable screen number - using first available.
+4.3732 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7bee6f3d3460>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7bee6f3d3400>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7bee6769ea40>, multiSample=False, name='window1', numSamples=2, pos=(420, 32), screen=1, size=array([1080, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.3733 	EXP 	window1: backgroundImage = None
+4.3733 	EXP 	window1: backgroundFit = 'cover'
+4.3758 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
+4.3758 	EXP 	window1: recordFrameIntervals = False
+4.4423 	EXP 	window1: recordFrameIntervals = True
+4.5189 	EXP 	Screen (1) actual frame rate measured at 143.40Hz
+4.5189 	EXP 	window1: recordFrameIntervals = False
+4.5606 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+4.5612 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1.2)
+4.5642 	EXP 	Created waiting_for_trigger_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='waiting_for_trigger_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='waiting for scanner', units='norm', win=Window(...), wrapWidth=2)
+4.5666 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.3), italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+4.5692 	EXP 	Created text_relax = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.07), italic=False, languageStyle='LTR', name='text_relax', opacity=1, ori=0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='Relax', units='norm', win=Window(...), wrapWidth=1)
+4.5716 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='text_4', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='default text', units='norm', win=Window(...), wrapWidth=1)
+4.5773 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5774 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5809 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([ 1.,  1., -1.]), lineColorSpace='rgb', lineRGB=array([ 1,  1, -1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0.        , 0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.5854 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5855 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5889 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([0.35686275, 0.69411765, 0.80392157]), lineColorSpace='rgb', lineRGB=array([0.35686275, 0.69411765, 0.80392157]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([ 0.        , -0.33333333]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.5933 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5934 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.5968 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.5, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.6010 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.6011 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+4.6044 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=3, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='norm', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.6071 	EXP 	Created instruct_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='instruct_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='replace me', units='norm', win=Window(...), wrapWidth=1.2)
+4.6091 	EXP 	Created thank_you_end_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.1), italic=False, languageStyle='LTR', name='thank_you_end_run_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='thank you!', units='norm', win=Window(...), wrapWidth=1)
+4.6159 	EXP 	instruct_text: height = np.float64(0.06)
+4.6159 	EXP 	instruct_text: height = np.float64(0.06)
+4.6159 	EXP 	instruct_text: height = np.float64(0.06)
+4.6159 	EXP 	instruct_text: text = 'Great job! Now, you’re going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \n\nWhen the ball moves upwards, that corresponds to the describing practice.'
+5.5975 	DATA 	Keypress: space
+5.6022 	EXP 	instruct_text: height = np.float64(0.06)
+5.6022 	EXP 	instruct_text: height = np.float64(0.06)
+5.6022 	EXP 	instruct_text: height = np.float64(0.06)
+5.6022 	EXP 	instruct_text: text = 'When you see the plus sign (+), just relax.\n\nOnce the circles appear, please start the Describing practice. This scan will last 2.5 min.'
+5.7489 	DATA 	Keypress: space
+5.7515 	EXP 	waiting_for_trigger_text: autoDraw = True
+5.8865 	DATA 	Keypress: space
+5.9913 	DATA 	Keypress: 5
+5.9988 	EXP 	waiting_for_trigger_text: autoDraw = False
+5.9988 	EXP 	text_2: autoDraw = True
+5.9988 	EXP 	text_relax: autoDraw = True
+36.0020 	EXP 	text_2: autoDraw = False
+36.0020 	EXP 	text_relax: autoDraw = False
+36.0020 	EXP 	text_2: autoDraw = False
+36.9966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+36.9966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+38.1966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+38.1966 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+39.3980 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+39.3980 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+40.6001 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+40.6001 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+41.8060 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+41.8060 	EXP 	unnamed Circle: radius = np.float64(0.135)
+41.8060 	EXP 	unnamed Circle: fillColor = 'white'
+41.8060 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+43.0027 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+43.0027 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+44.2036 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+44.2036 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+45.4056 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+45.4056 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+46.6073 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+46.6073 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+47.8081 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+47.8081 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+49.0098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+49.0098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+50.2109 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+50.2109 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+51.4125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+51.4125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+52.6135 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+52.6135 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+53.8153 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+53.8153 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+55.0169 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+55.0169 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+56.2176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+56.2176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+57.4202 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+57.4202 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+58.6266 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+58.6266 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+59.8289 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+59.8289 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+61.0306 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+61.0306 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+62.2312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+62.2312 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+63.4328 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+63.4328 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+64.6411 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+64.6411 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+64.6411 	EXP 	unnamed Circle: radius = np.float64(0.135)
+64.6411 	EXP 	unnamed Circle: fillColor = 'white'
+65.8355 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+65.8355 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+67.0374 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+67.0374 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+68.2384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+68.2384 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+69.4403 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+69.4403 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+70.6414 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+70.6414 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+71.8429 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+71.8429 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+73.0444 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+73.0444 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+74.2447 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+74.2447 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+75.4481 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+75.4481 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+76.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+76.6472 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+77.8561 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+77.8561 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+77.8561 	EXP 	unnamed Circle: radius = np.float64(0.12150000000000001)
+77.8561 	EXP 	unnamed Circle: fillColor = 'white'
+79.0509 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+79.0509 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+80.2517 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+80.2517 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+81.4534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+81.4534 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+82.6552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+82.6552 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+83.8565 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+83.8565 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+85.0575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+85.0575 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+86.2651 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+86.2651 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+87.4679 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+87.4679 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+88.6682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+88.6682 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+89.8702 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+89.8702 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+91.0722 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+91.0722 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+92.2801 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+92.2801 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+93.4822 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+93.4822 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+94.6825 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+94.6825 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+95.8833 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+95.8833 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+97.0862 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+97.0862 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+98.2865 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+98.2865 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+99.4886 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+99.4886 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+100.6901 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+100.6901 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+101.8904 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+101.8904 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+103.0927 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+103.0927 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+104.2933 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+104.2933 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+105.4947 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+105.4947 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+106.6960 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+106.6960 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+107.8986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+107.8986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+109.1005 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+109.1005 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+110.3066 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+110.3066 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+111.5089 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+111.5089 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+112.7098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+112.7098 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+113.9120 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+113.9120 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+115.1133 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+115.1133 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+116.3141 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+116.3141 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+117.5154 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+117.5154 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+118.7170 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+118.7170 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+119.9188 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+119.9188 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+121.1194 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+121.1194 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+122.3215 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+122.3215 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+123.5230 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+123.5230 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+124.7309 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+124.7309 	EXP 	unnamed Circle: radius = np.float64(0.12150000000000001)
+124.7309 	EXP 	unnamed Circle: fillColor = 'white'
+124.7309 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+125.9252 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+125.9252 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+127.1268 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+127.1268 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+128.3281 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+128.3281 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+129.5300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+129.5300 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+130.7307 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+130.7307 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+131.9322 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+131.9322 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+133.1344 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+133.1344 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+134.3349 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+134.3349 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+135.5371 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+135.5371 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+136.7375 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+136.7375 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+137.9394 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+137.9394 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+139.1410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+139.1410 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+140.3418 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+140.3418 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+141.5525 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+141.5525 	EXP 	unnamed Circle: radius = np.float64(0.10935000000000002)
+141.5525 	EXP 	unnamed Circle: fillColor = 'white'
+141.5525 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+142.7448 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+142.7448 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+143.9457 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+143.9457 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+145.1536 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+145.1536 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+146.3556 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+146.3556 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+147.5582 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+147.5582 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+148.7647 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+148.7647 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+149.9666 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+149.9666 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+151.1688 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+151.1688 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+152.3697 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+152.3697 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+153.5713 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+153.5713 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+154.7719 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+154.7719 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+155.9738 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+155.9738 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+157.1755 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+157.1755 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+158.3767 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+158.3767 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+159.5785 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+159.5785 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+160.7790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+160.7790 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+161.9807 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+161.9807 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+163.1820 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+163.1820 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+164.3837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+164.3837 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+165.5852 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+165.5852 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+166.7924 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+166.7924 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+167.9949 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+167.9949 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+169.1955 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+169.1955 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+170.3969 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+170.3969 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+171.5986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+171.5986 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+172.7997 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+172.7997 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+174.0015 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+174.0015 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+175.2039 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+175.2039 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+176.4106 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+176.4106 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+177.6125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+177.6125 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+178.8136 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+178.8136 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+180.0239 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+180.0239 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+180.0239 	EXP 	unnamed Circle: radius = np.float64(0.10935000000000002)
+180.0239 	EXP 	unnamed Circle: fillColor = 'white'
+181.2166 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+181.2166 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+182.4176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+182.4176 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+183.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+183.6198 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+184.8206 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+184.8206 	EXP 	unnamed Circle: fillColor = <class 'numpy.ndarray'>
+186.0611 	EXP 	text_2: autoDraw = True
+187.0017 	EXP 	text_2: autoDraw = False
+188.6047 	DATA 	Keypress: 2
+188.6082 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+188.6130 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6210 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6276 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6337 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.6407 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'Always'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+188.6482 	EXP 	None: autoLog = True
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: styleTweaks = []
+188.6482 	EXP 	None: contrast = 1.0
+188.6482 	EXP 	None: markerPos = None
+188.6482 	EXP 	None: autoLog = True
+188.6482 	EXP 	None: markerPos = 5
+188.7108 	DATA 	Keypress: 0
+188.7138 	EXP 	None: markerPos = 5
+188.7160 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+188.7198 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7230 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7259 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7307 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.7376 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Never', 'All the time'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+188.7426 	EXP 	None: autoLog = True
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: styleTweaks = []
+188.7426 	EXP 	None: contrast = 1.0
+188.7426 	EXP 	None: markerPos = None
+188.7426 	EXP 	None: autoLog = True
+188.7426 	EXP 	None: markerPos = 5
+188.8018 	DATA 	Keypress: 2
+188.8047 	EXP 	None: markerPos = 6
+188.9030 	DATA 	Keypress: 0
+188.9057 	EXP 	None: markerPos = 6
+188.9077 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+188.9112 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9154 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9183 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9240 	WARNING 	Font b'Arial' was requested. No similar font found.
+188.9310 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very Difficult'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+188.9372 	EXP 	None: autoLog = True
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: styleTweaks = []
+188.9372 	EXP 	None: contrast = 1.0
+188.9372 	EXP 	None: markerPos = None
+188.9372 	EXP 	None: autoLog = True
+188.9372 	EXP 	None: markerPos = 5
+189.0042 	DATA 	Keypress: 2
+189.0072 	EXP 	None: markerPos = 6
+189.1002 	DATA 	Keypress: 0
+189.1031 	EXP 	None: markerPos = 6
+189.1052 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='How calm do you feel right now?', units='norm', win=Window(...), wrapWidth=1.2)
+189.1088 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1119 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1148 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1178 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.1249 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('Not at all', 'Very calm'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+189.1288 	EXP 	None: autoLog = True
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: styleTweaks = []
+189.1288 	EXP 	None: contrast = 1.0
+189.1288 	EXP 	None: markerPos = None
+189.1288 	EXP 	None: autoLog = True
+189.1288 	EXP 	None: markerPos = 5
+189.1761 	DATA 	Keypress: 2
+189.1789 	EXP 	None: markerPos = 6
+189.3126 	DATA 	Keypress: 0
+189.3157 	EXP 	None: markerPos = 6
+189.3184 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+189.3223 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3265 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3294 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3323 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.3397 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+189.3448 	EXP 	None: autoLog = True
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: styleTweaks = []
+189.3448 	EXP 	None: contrast = 1.0
+189.3448 	EXP 	None: markerPos = None
+189.3448 	EXP 	None: autoLog = True
+189.3448 	EXP 	None: markerPos = 5
+189.3449 	DATA 	Keypress: 2
+189.3476 	EXP 	None: markerPos = 6
+189.5250 	DATA 	Keypress: 0
+189.5278 	EXP 	None: markerPos = 6
+189.5301 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+189.5336 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5367 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5397 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5426 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.5495 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+189.5536 	EXP 	None: autoLog = True
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: styleTweaks = []
+189.5536 	EXP 	None: contrast = 1.0
+189.5536 	EXP 	None: markerPos = None
+189.5536 	EXP 	None: autoLog = True
+189.5536 	EXP 	None: markerPos = 5
+189.6768 	DATA 	Keypress: 2
+189.6796 	EXP 	None: markerPos = 6
+189.9852 	DATA 	Keypress: 0
+189.9882 	EXP 	None: markerPos = 6
+189.9904 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.06), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.2)
+189.9941 	WARNING 	Font b'Arial' was requested. No similar font found.
+189.9973 	WARNING 	Font b'Arial' was requested. No similar font found.
+190.0002 	WARNING 	Font b'Arial' was requested. No similar font found.
+190.0031 	WARNING 	Font b'Arial' was requested. No similar font found.
+190.0100 	EXP 	Created None = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=0, fillColor=None, flip=False, font='Arial', granularity=1, labelColor=None, labelHeight=np.float64(0.06), labelWrapWidth=None, labels=('False', 'True'), lineColor=None, markerColor=None, name=None, opacity=None, ori=0, pos=array([0., 0.]), readOnly=False, self=UNKNOWN, size=array([0.85, 0.1 ]), startValue=None, style='rating', styleTweaks=[], ticks=array([1, 9]), units='norm', win=Window(...))
+190.0138 	EXP 	None: autoLog = True
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: styleTweaks = []
+190.0138 	EXP 	None: contrast = 1.0
+190.0138 	EXP 	None: markerPos = None
+190.0138 	EXP 	None: autoLog = True
+190.0138 	EXP 	None: markerPos = 5
+190.1141 	DATA 	Keypress: 2
+190.1171 	EXP 	None: markerPos = 6
+190.2989 	DATA 	Keypress: 0
+190.3019 	EXP 	None: markerPos = 6
