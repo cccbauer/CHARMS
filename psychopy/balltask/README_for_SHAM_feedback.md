@@ -1,6 +1,10 @@
  
 # Balltask Real-time fMRI Neurofeedback
 
+Clemens C.C. Bauer November 2025
+
+
+
 ## Overview
 Balltask can be run in REAL or SHAM mode for randomized controlled trials of neurofeedback.
 
