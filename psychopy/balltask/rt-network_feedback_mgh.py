@@ -1145,7 +1145,7 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
         with open(filename+'_roi_outputs.csv', 'a') as csvfile:
             stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             if frame % 10 == 0:  # Print every 10th frame
-                print(([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]]))
+                print(([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1], f'Hits: CEN={hit_counter[0]}, DMN={hit_counter[1]}']))
             stim_writer.writerow([frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2, roi_raw_activations[0], roi_raw_activations[1], 'feedback', hit_counter[0], hit_counter[1], pda_outlier, ball.pos[1], target_circles[0].pos[1], target_circles[1].pos[1]])
 
         # Increment the frame
@@ -1361,7 +1361,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
                         # CEN (top circle, position 0) - check if virtual ball is above center
                         if virtual_ball_y > target_circles[0].pos[1]:
                             sham_virtual_cen_hits += 1
-                            print(f'VIRTUAL HIT: CEN (frame {frame}, simulated frame {frame_idx})')
+                            # No terminal output for blinding
                             virtual_ball_y = 0.0  # Reset virtual ball
                             virtual_ball_x = 0.0
                             break  # Stop simulating frames in this TR after hit
@@ -1369,7 +1369,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
                         # DMN (bottom circle, position 1) - check if virtual ball is below center  
                         elif virtual_ball_y < target_circles[1].pos[1]:
                             sham_virtual_dmn_hits += 1
-                            print(f'VIRTUAL HIT: DMN (frame {frame}, simulated frame {frame_idx})')
+                            # No terminal output for blinding
                             virtual_ball_y = 0.0  # Reset virtual ball
                             virtual_ball_x = 0.0
                             break  # Stop simulating frames in this TR after hit
@@ -1378,7 +1378,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
             with open(filename + '_roi_outputs.csv', 'a') as csvfile:
                 stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                 print([frame, triggerClock.getTime(), roi_raw_activations[0], 
-                       roi_raw_activations[1], f'Virtual hits: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}'])
+                       roi_raw_activations[1], f'Hits: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}'])
                 stim_writer.writerow(
                     [frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2,
                      roi_raw_activations[0], roi_raw_activations[1], 'feedback', 
@@ -1425,8 +1425,8 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
             core.wait(wait_time)
     
     actual_playback_time = playbackClock.getTime()
-    print(f"SHAM visual playback complete in {actual_playback_time:.1f}s")
-    print(f"SHAM VIRTUAL HITS: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}")
+    print(f"Playback complete in {actual_playback_time:.1f}s")
+    print(f"Total Hits: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}")
     print(f"Waiting for final MURFI volumes...")
     
     # Wait for last MURFI volumes to arrive (up to 5 TRs worth of time)
@@ -1476,13 +1476,13 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
                         
                         if virtual_ball_y > target_circles[0].pos[1]:
                             sham_virtual_cen_hits += 1
-                            print(f'VIRTUAL HIT: CEN (frame {frame}, simulated frame {frame_idx})')
+                            # No terminal output for blinding
                             virtual_ball_y = 0.0
                             virtual_ball_x = 0.0
                             break
                         elif virtual_ball_y < target_circles[1].pos[1]:
                             sham_virtual_dmn_hits += 1
-                            print(f'VIRTUAL HIT: DMN (frame {frame}, simulated frame {frame_idx})')
+                            # No terminal output for blinding
                             virtual_ball_y = 0.0
                             virtual_ball_x = 0.0
                             break
@@ -1499,8 +1499,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
         
         core.wait(0.1)  # Small wait between checks
     
-    print(f"SHAM playback complete. Collected {frame} volumes total")
-    print(f"FINAL SHAM VIRTUAL HITS: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}")
+    print(f"Playback complete. Collected {frame} volumes total")
     if frame < target_volumes:
         print(f"WARNING: Expected {target_volumes} volumes but only got {frame}")
 
