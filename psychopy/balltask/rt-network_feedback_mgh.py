@@ -30,12 +30,6 @@ import fnmatch  # for matching csv file names for given run for sham subjects
 import numpy as np
 import shutil
 
-# button box
-# left_button = '3'
-# right_button = '4'
-# enter_button = '1'
-# FONT_SCALE = 1.4
-
 # button box mgh
 left_button='1'
 right_button='2'
@@ -96,7 +90,7 @@ expInfo = {'participant': input_participant, 'randomization': input_randomizatio
            'run': input_run, 'anchor': input_anchor, 'feedback_on': input_feedback,
            'feedback_condition': input_feedback_condition}
 # MURFI fake for debugging
-murfi_FAKE = False
+murfi_FAKE = True
 
 # Add popup warning if murfi_FAKE is True
 if murfi_FAKE:
@@ -119,7 +113,7 @@ if murfi_FAKE:
             print('Continuing with murfi_FAKE = True')
             screen_size=False
 else:
-    print('Continuing with murfi_FAKE = True')
+    print('Continuing with murfi_FAKE = False')
     screen_size=True
 
 # Show dialogue box until all participant info has been entered
@@ -441,8 +435,6 @@ if SHAM:
         if is_dataset_complete(participant_id):
             matched_participant_id = participant_id
             matched_rand_id = row['randomization_id']
-            #print(f"Using REAL participant {participant_id} (randomization {matched_rand_id}) "
-              #   f"data for SHAM participant {expInfo['participant']} (randomization {rand_num:03d})")
             break
     
     if matched_participant_id is None:
@@ -721,7 +713,6 @@ def run_instructions(instruct_text):
 def quit_psychopy():
     """Close everything and exit nicely (ending the experiment)
     """
-    # pygame.quit()  # safe even if pygame was never initialised
     logging.flush()
 
     # properly shutdown ioHub server
@@ -757,7 +748,6 @@ def calculate_ball_position(circle_reference_position, activation, ball_x_positi
         ball_x_position=ball_x_position+ (np.imag(cursor_position) * scale_factor_z2pixels/internal_scaler / tr_to_frame_ratio )
     
     ball_position=(ball_x_position,ball_y_position)
-    #print("Ball position:", ball_position)
     return(ball_position)    
 
 
@@ -782,10 +772,10 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 no_feedback_run1_text = f"Next, you will get to continue the Mindful Describing practice you just learned.\
     \n\nBefore, you mentioned using your {expInfo['anchor']} as an anchor for your Describing Practice. \
 Try to continue using this as your anchor, but it is also okay to switch anytime.\
-\n\nYou will see 2 circles with a white ball in the middle, but they won’t move for now."
+\n\nYou will see 2 circles with a white ball in the middle, but they won't move for now."
 
 ready_text="You will see the plus sign (+) for 30 seconds at the start. \
-Whenever you see the plus +,  please don’t practice Describing – just relax.\
+Whenever you see the plus +, please don't practice Describing - just relax.\
 \n\nOnce the circles appear, please start the Describing practice. \
 This practice will last 2.5 min."
 
@@ -793,19 +783,16 @@ ready_text2="When you see the plus sign (+), just relax.\
 \n\nOnce the circles appear, please start the Describing practice. \
 This scan will last 2.5 min."
 
-feedback_run1_text1 = "Great job! Now, you’ll get to try moving the ball with your mindful describing practice! \
+feedback_run1_text1 = "Great job! Now, you'll get to try moving the ball with your mindful describing practice! \
 \n\nYou will see the 2 circles and white ball again. \
 When the white ball moves up towards the top yellow circle, this means you are in a mindful brain state with your describing practice. \
 \nIf the ball reaches either of the circles, it will move back to the center."
 
-#feedback_run1_text2 = "Try to focus mostly on the Mindful Describing Practice by being aware of your sensations from moment to moment and silently making a note in your mind. \
-#\n\nYou can check the screen every once in a while to see where the ball is going."
-
-feedback_later_runs_text = "Great job! Now, you’re going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
+feedback_later_runs_text = "Great job! Now, you're going practice Mindful Describing for another 2.5min with more brain feedback from the ball. \
 \n\nWhen the ball moves upwards, that corresponds to the describing practice."
 
-no_feedback_later_runs_text = "Great job! Next, you’ll get to practice Describing for another 2.5min. \
-\nThis time the ball and circles will not move, so you don’t need to check them."
+no_feedback_later_runs_text = "Great job! Next, you'll get to practice Describing for another 2.5min. \
+\nThis time the ball and circles will not move, so you don't need to check them."
 
 # Depending on whether feedback is offered/which run it is -- show different instruction slides
 if expInfo['feedback_on'] == "No Feedback":
@@ -815,7 +802,6 @@ if expInfo['feedback_on'] == "No Feedback":
         instruction_slide_list = [no_feedback_later_runs_text, ready_text2]
 elif expInfo['feedback_on'] == 'Feedback':
     if int(expInfo['run']) == 1: 
-        # instruction_slide_list = [feedback_run1_text1, feedback_run1_text2, ready_text]
         instruction_slide_list = [feedback_run1_text1, ready_text2]
     else:
         instruction_slide_list = [feedback_later_runs_text, ready_text2]
@@ -827,9 +813,8 @@ for instructions_slide in instruction_slide_list:
 
 
  #murfi communicator
-# if not (SHAM and expInfo['feedback_on'] == 'Feedback'):
 from murfi_activation_communicator import MurfiActivationCommunicator
-roi_names = ['cen', 'dmn']#, 'mpfc','wm']
+roi_names = ['cen', 'dmn']
 # REPLACE THIS IP WITH THE MURFI COMPUTER'S IP 192.168.2.5, EXTERNAL STIMULUS COMPUTER IS 196.168.2.6, FOR RUNNING ALL ON THE SYSTEM76 COMPUTER USE INTERNAL IP 127.0.0.1
 communicator = MurfiActivationCommunicator('127.0.0.1',
                                                15001, 210,
@@ -947,7 +932,6 @@ print("starting baseline")
 while continueRoutine and routineTimer.getTime() > 0:
     # During baseline period, we still want to record MURFI outputs
     # get current time
-    # if not (SHAM and expInfo['feedback_on'] == 'Feedback'):
     communicator.update()
     roi_raw_activations=[]
 
@@ -961,7 +945,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         print (f"Did not get data for frame {frame}")
         roi_raw_activations = [np.nan, np.nan]
 
-    # check for any missing values (nan) in the roi_raw_activatinp.isnan(roi_raw_activations[0])ons pulled for the current frame
+    # check for any missing values (nan) in the roi_raw_activations pulled for the current frame
     # If there is a nan value, this most likely indicates that data hasn't been acquired yet for the current volume.
     # In this case, continue, and keep trying to acquire roi_raw_activations from MURFI (without advancing the frame)
     if np.isnan(roi_raw_activations[0]) or np.isnan(roi_raw_activations[1]):
@@ -1041,7 +1025,6 @@ win.flip()
 
 pda_outlier=False
 frame_data = []  # List to store all frame details
-frame_save_counter = 0  # NEW: Counter for frame saving optimization
 #-------Start Routine "feedback"-------
 # initialize last_acquired_frame_time
 last_acquired_frame_time = feedbackClock.getTime()
@@ -1143,7 +1126,7 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
                 circle_center=target_circles[i].pos[1], 
                 ball_center=ball.pos[1]):
 
-                # increment hig count
+                # increment hit count
                 hit_counter[i]=hit_counter[i]+1
                 print('HIT', roi_names_list[i])
                 ball.pos = (0,0)
@@ -1161,7 +1144,8 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
         # Save info to outfile for each volume       
         with open(filename+'_roi_outputs.csv', 'a') as csvfile:
             stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            print(([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]]))
+            if frame % 10 == 0:  # Print every 10th frame
+                print(([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]]))
             stim_writer.writerow([frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2, roi_raw_activations[0], roi_raw_activations[1], 'feedback', hit_counter[0], hit_counter[1], pda_outlier, ball.pos[1], target_circles[0].pos[1], target_circles[1].pos[1]])
 
         # Increment the frame
@@ -1244,29 +1228,26 @@ while not (SHAM and expInfo['feedback_on'] == 'Feedback') and continueRoutine an
 
 #END OF FEEDBACK LOOP
 
-# OPTIMIZED SHAM feedback display - Smooth interpolation with correct timing
+# OPTIMIZED SHAM feedback display - Smooth interpolation with correct timing and VIRTUAL HIT COUNTING
 if SHAM and expInfo['feedback_on'] == 'Feedback':
     # Load the sham feedback CSV
     df_sham = pd.read_csv(csv_file)
-    #print(f"Loaded SHAM feedback file: {csv_file}")
-    #print(f"Total frames in CSV: {len(df_sham)}")
-
+    
     # Compute offset: first frame's time value
     time_offset = df_sham.iloc[0]["time"]
-
-
+    
     # DEBUG: Check timing
     print(f"First frame time: {df_sham.iloc[0]['time']:.3f}s")
     print(f"Last frame time: {df_sham.iloc[-1]['time']:.3f}s")
     print(f"Time offset: {time_offset:.3f}s")
     print(f"Adjusted duration: {df_sham.iloc[-1]['time'] - time_offset:.3f}s")
+    
     # Set run_stop_time to pass the check for slider questions
     run_stop_time = 100
-
+    
     # Start a dedicated playback clock
     playbackClock = core.Clock()
     playbackClock.reset()
-    
     
     # OPTIMIZATION: Downsample to 60Hz for smooth playback
     frame_diffs = df_sham['time'].diff()
@@ -1276,8 +1257,8 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     if current_fps > 90:
         downsample_factor = int(current_fps / 60)
         df_sham = df_sham.iloc[::downsample_factor].reset_index(drop=True)
-        #print(f"Downsampled from {current_fps:.1f}Hz to ~60Hz")
-        #print(f"Reduced from {len(df_sham)*downsample_factor} to {len(df_sham)} frames")
+        print(f"Downsampled from {current_fps:.1f}Hz to ~60Hz")
+        print(f"Reduced from {len(df_sham)*downsample_factor} to {len(df_sham)} frames")
     
     # Pre-convert to numpy arrays for faster access
     ball_data = {
@@ -1306,44 +1287,107 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
     frame_times = df_sham['time'].values - time_offset
     
     # Filter to include all frames (let MURFI collection continue until data stops)
-    # This ensures we collect all 150 volumes even if timing is slightly off
     num_valid_frames = len(df_sham)  # Use all downsampled frames
     max_playback_time = frame_times[-1]  # Will run for full duration
     
-    #print(f"Filtered to {num_valid_frames} frames within {max_playback_time:.1f}s")
-    #print(f"Starting SHAM playback")
+    print(f"Filtered to {num_valid_frames} frames within {max_playback_time:.1f}s")
+    print(f"Starting SHAM playback with VIRTUAL hit counting")
     
-#    Loop only over valid frames (within 150s window)
+    # NEW: Initialize virtual hit counters for SHAM
+    sham_virtual_cen_hits = 0
+    sham_virtual_dmn_hits = 0
+    
+    # NEW: Track virtual ball position based on SHAM's actual brain activity
+    virtual_ball_y = 0.0
+    virtual_ball_x = 0.0
+    
+    # Loop only over valid frames (within 150s window)
     for idx in range(num_valid_frames):
         
         # Check if Esc was pressed
         if event.getKeys(keyList=["escape"]):
             core.quit()
-
+        
         # Check MURFI on every iteration to ensure we don't miss volumes
         communicator.update()
         roi_raw_activations = []
-
+        
         try:
             for i in range(n_roi):
                 roi_raw_i = communicator.get_roi_activation(roi_names_list[i], frame)
                 roi_raw_activations.append(roi_raw_i)
         except:
             roi_raw_activations = [np.nan, np.nan]
-
+        
         # Check for valid data
         if len(roi_raw_activations) >= 2 and not (np.isnan(roi_raw_activations[0]) or np.isnan(roi_raw_activations[1])):
+            
+            # NEW: Calculate what WOULD happen with SHAM's actual brain activity
+            roi_activities = roi_raw_activations
+            
+            # Check for outlier
+            if np.nanmax(np.abs(roi_activities)) > expInfo['pda_outlier_threshold']:
+                pda_outlier_sham = True
+            else:
+                pda_outlier_sham = False
+            
+            # Calculate virtual ball movement based on SHAM's actual brain activity
+            # (Same logic as REAL mode, matching frame-by-frame updates)
+            if not pda_outlier_sham:
+                # Determine direction and activity
+                max_roi_idx = roi_activities.index(np.nanmax(roi_activities))
+                if np.nanmean(roi_activities) != 0:
+                    activity_sham = abs(np.nanmax(roi_activities) - np.nanmin(roi_activities)) / 10
+                    direction_sham = positions[max_roi_idx]
+                    
+                    # Calculate virtual cursor position
+                    cursor_position_sham = np.dot(direction_sham, activity_sham)
+                    
+                    # Simulate frame-by-frame updates to match REAL mode exactly
+                    # In REAL mode, the ball updates every frame (~60 Hz)
+                    # We need to simulate tr_to_frame_ratio frames of movement
+                    num_frames_per_tr = int(tr_to_frame_ratio)
+                    delta_per_frame_y = (np.real(cursor_position_sham) * 
+                                        (scale_factor_z2pixels/internal_scaler) / tr_to_frame_ratio)
+                    delta_per_frame_x = (np.imag(cursor_position_sham) * 
+                                        scale_factor_z2pixels/internal_scaler / tr_to_frame_ratio)
+                    
+                    # Apply the movement across all frames in this TR
+                    for frame_idx in range(num_frames_per_tr):
+                        virtual_ball_y += delta_per_frame_y
+                        virtual_ball_x += delta_per_frame_x
+                        
+                        # Check for virtual hits after each simulated frame (matching REAL mode)
+                        # CEN (top circle, position 0) - check if virtual ball is above center
+                        if virtual_ball_y > target_circles[0].pos[1]:
+                            sham_virtual_cen_hits += 1
+                            print(f'VIRTUAL HIT: CEN (frame {frame}, simulated frame {frame_idx})')
+                            virtual_ball_y = 0.0  # Reset virtual ball
+                            virtual_ball_x = 0.0
+                            break  # Stop simulating frames in this TR after hit
+                        
+                        # DMN (bottom circle, position 1) - check if virtual ball is below center  
+                        elif virtual_ball_y < target_circles[1].pos[1]:
+                            sham_virtual_dmn_hits += 1
+                            print(f'VIRTUAL HIT: DMN (frame {frame}, simulated frame {frame_idx})')
+                            virtual_ball_y = 0.0  # Reset virtual ball
+                            virtual_ball_x = 0.0
+                            break  # Stop simulating frames in this TR after hit
+            
+            # Save to CSV with VIRTUAL hit counts
             with open(filename + '_roi_outputs.csv', 'a') as csvfile:
                 stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-                if frame % 10 == 0:  # Print every 10th frame
-                    print([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]])
+                print([frame, triggerClock.getTime(), roi_raw_activations[0], 
+                       roi_raw_activations[1], f'Virtual hits: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}'])
                 stim_writer.writerow(
                     [frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2,
-                     roi_raw_activations[0], roi_raw_activations[1], 'feedback', 0, 0, np.nan, np.nan, np.nan,
-                     np.nan])
+                     roi_raw_activations[0], roi_raw_activations[1], 'feedback', 
+                     sham_virtual_cen_hits, sham_virtual_dmn_hits,  # <-- VIRTUAL hit counts!
+                     pda_outlier_sham, virtual_ball_y, target_circles[0].pos[1], target_circles[1].pos[1]])
             frame += 1
-
+        
         # Update ball using numpy arrays - SMOOTH 60Hz interpolation
+        # This is the VISUAL feedback (yoked from matched participant)
         ball.pos = (ball_data['x'][idx], ball_data['y'][idx])
         ball.radius = ball_data['radius'][idx]
         ball.fillColor = [
@@ -1351,7 +1395,7 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
             ball_data['color_g'][idx],
             ball_data['color_b'][idx]
         ]
-
+        
         # Update circles using numpy arrays
         for i, circle in enumerate(target_circles):
             circle.pos = (roi_data[i]['x'][idx], roi_data[i]['y'][idx])
@@ -1366,13 +1410,13 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
                 roi_data[i]['line_g'][idx],
                 roi_data[i]['line_b'][idx]
             ]
-
-        # Draw all elements
+        
+        # Draw all elements (YOKED visual feedback)
         for circle in target_circles:
             circle.draw()
         ball.draw()
         win.flip()
-
+        
         # Timing control for smooth playback
         target_time = frame_times[idx]
         current_time = playbackClock.getTime()
@@ -1381,10 +1425,11 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
             core.wait(wait_time)
     
     actual_playback_time = playbackClock.getTime()
-    #print(f"SHAM visual playback complete in {actual_playback_time:.1f}s")
+    print(f"SHAM visual playback complete in {actual_playback_time:.1f}s")
+    print(f"SHAM VIRTUAL HITS: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}")
     print(f"Waiting for final MURFI volumes...")
     
-# Wait for last MURFI volumes to arrive (up to 5 TRs worth of time)
+    # Wait for last MURFI volumes to arrive (up to 5 TRs worth of time)
     wait_start = playbackClock.getTime()
     max_wait_time = expInfo['tr'] * 5  # 6 seconds for TR=1.2
     target_volumes = 150  # We want exactly 150 total volumes
@@ -1401,24 +1446,65 @@ if SHAM and expInfo['feedback_on'] == 'Feedback':
             roi_raw_activations = [np.nan, np.nan]
         
         if len(roi_raw_activations) >= 2 and not (np.isnan(roi_raw_activations[0]) or np.isnan(roi_raw_activations[1])):
+            
+            # Continue virtual hit counting in post-playback phase
+            roi_activities = roi_raw_activations
+            
+            if np.nanmax(np.abs(roi_activities)) > expInfo['pda_outlier_threshold']:
+                pda_outlier_sham = True
+            else:
+                pda_outlier_sham = False
+            
+            if not pda_outlier_sham:
+                max_roi_idx = roi_activities.index(np.nanmax(roi_activities))
+                if np.nanmean(roi_activities) != 0:
+                    activity_sham = abs(np.nanmax(roi_activities) - np.nanmin(roi_activities)) / 10
+                    direction_sham = positions[max_roi_idx]
+                    
+                    cursor_position_sham = np.dot(direction_sham, activity_sham)
+                    
+                    # Simulate frame-by-frame updates to match REAL mode
+                    num_frames_per_tr = int(tr_to_frame_ratio)
+                    delta_per_frame_y = (np.real(cursor_position_sham) * 
+                                        (scale_factor_z2pixels/internal_scaler) / tr_to_frame_ratio)
+                    delta_per_frame_x = (np.imag(cursor_position_sham) * 
+                                        scale_factor_z2pixels/internal_scaler / tr_to_frame_ratio)
+                    
+                    for frame_idx in range(num_frames_per_tr):
+                        virtual_ball_y += delta_per_frame_y
+                        virtual_ball_x += delta_per_frame_x
+                        
+                        if virtual_ball_y > target_circles[0].pos[1]:
+                            sham_virtual_cen_hits += 1
+                            print(f'VIRTUAL HIT: CEN (frame {frame}, simulated frame {frame_idx})')
+                            virtual_ball_y = 0.0
+                            virtual_ball_x = 0.0
+                            break
+                        elif virtual_ball_y < target_circles[1].pos[1]:
+                            sham_virtual_dmn_hits += 1
+                            print(f'VIRTUAL HIT: DMN (frame {frame}, simulated frame {frame_idx})')
+                            virtual_ball_y = 0.0
+                            virtual_ball_x = 0.0
+                            break
+            
             with open(filename + '_roi_outputs.csv', 'a') as csvfile:
                 stim_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                 print([frame, triggerClock.getTime(), roi_raw_activations[0], roi_raw_activations[1]])
                 stim_writer.writerow(
                     [frame, expInfo['scale_factor'], triggerClock.getTime(), triggerClock.getTime() + 1.2,
-                     roi_raw_activations[0], roi_raw_activations[1], 'feedback', 0, 0, np.nan, np.nan, np.nan, np.nan])
+                     roi_raw_activations[0], roi_raw_activations[1], 'feedback', 
+                     sham_virtual_cen_hits, sham_virtual_dmn_hits, 
+                     pda_outlier_sham, virtual_ball_y, target_circles[0].pos[1], target_circles[1].pos[1]])
             frame += 1
         
         core.wait(0.1)  # Small wait between checks
     
-
-    #print(f"SHAM playback complete. Collected {frame} volumes total")
+    print(f"SHAM playback complete. Collected {frame} volumes total")
+    print(f"FINAL SHAM VIRTUAL HITS: CEN={sham_virtual_cen_hits}, DMN={sham_virtual_dmn_hits}")
     if frame < target_volumes:
         print(f"WARNING: Expected {target_volumes} volumes but only got {frame}")
 
-
 # End SHAM feedback loop
-
 
 # If feedback was displayed, save frame data
 if expInfo['feedback_on'] == 'Feedback':
@@ -1605,8 +1691,7 @@ if expInfo['feedback_condition'] == '15min':
         subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization),
             str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])
     else:
-        print('enable if you like Syncing OneDrive. Please wait')
-        #subprocess.Popen(["onedrive", "--synchronize", "--single-directory", "CHARMS/psychopy", ">>",  "onedrive_log.tx"])
+        print('Syncing complete. Study session finished.')
 elif expInfo['feedback_condition'] == '30min':
     subprocess.Popen(["bash", "reopen_balltask_mgh.sh", str(next_participant), str(next_randomization),
         str(next_run), str(next_feedback), str(next_feedback_condition), str(anchor)])
