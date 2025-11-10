@@ -1,5 +1,4 @@
 participant_id	group
-001	R
 002	R
 003	R
 004	S
